@@ -6,47 +6,54 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 call plug#begin('~/.vim/plugged')
-
-" Iconos
-Plug 'ryanoasis/vim-devicons'
-Plug 'kaicataldo/material.vim', { 'branch': 'main'}
-Plug 'lambdalisue/battery.vim'
-Plug 'lambdalisue/wifi.vim'
-
-" NERD tree will be loaded on the first invocation of NERDTreeToggle command
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
-"Theme
-Plug 'vim-airline/vim-airline'
-Plug 'powerline/powerline'
-Plug 'morhetz/gruvbox'
-
-" Snippets
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-"Autocompletamiento
-Plug 'mjbrownie/django_completeme'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'jmcantrell/vim-virtualenv'
-
-"Buscador
-Plug 'kien/ctrlp.vim'
-
-"GIT
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-
-" typing
-Plug 'jiangmiao/auto-pairs'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
 
 " syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdcommenter'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'norcalli/nvim-colorizer.lua'
+
+" status bar
+Plug 'maximbaz/lightline-ale'
+Plug 'itchyny/lightline.vim'
+
+" Themes
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
+
+" Tree
+Plug 'scrooloose/nerdtree'
+
+" typing
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+
+" tmux
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
+
+" autocomplete
+Plug 'sirver/ultisnips'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" test
+Plug 'tyewang/vimux-jest-test'
+Plug 'janko-m/vim-test'
+
+" IDE
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'mhinz/vim-signify'
+Plug 'yggdroot/indentline'
+Plug 'scrooloose/nerdcommenter'
+
+" git
+Plug 'tpope/vim-fugitive'
+
+Plug 'tpope/vim-repeat'
 
 call plug#end()
