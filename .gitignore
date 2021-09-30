@@ -1,4 +1,5 @@
 .vim/plugged
 .vim/autoload
+.vim/pack
 .DS_Store
 .netrwhist
