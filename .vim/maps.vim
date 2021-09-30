@@ -33,7 +33,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
-" Remap keys for gotos:
+" Remap keys for gotos
 if &filetype == "javascript"
     nmap <silent> gd <Plug>(coc-definition)
     nmap <silent> gy <Plug>(coc-type-definition)
@@ -51,4 +51,3 @@ else
 endif
 
 " Keymap KITE
-nmap <silent> <buffer> gK <Plug>(kite-docs)
