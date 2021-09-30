@@ -1,29 +1,10 @@
-"Theme
-let g:airline_powerline_fonts = 1
-let g:airline_theme = "gruvbox"
-let g:airline_disable_statusline = 0
-let g:airline#extensions#battery#enabled = 1
-let g:airline#extensions#wifi#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#kite#enabled = 1
+"BATERIA
 let g:battery#update_tabline = 1    " For tabline.
 let g:battery#update_statusline = 1 " For statusline.
+
+"WIFI
 let g:wifi#update_tabline = 1    " For tabline.
 let g:wifi#update_statusline = 1 " For statusline.
-
-"TABLINE:
-let g:airline#extensions#tabline#enabled = 1           " enable airline tabline
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#show_close_button = 0 " remove 'X' at the end of the tabline
-let g:airline#extensions#tabline#tabs_label = ''       " can put text here like BUFFERS to denote buffers (I clear it so nothing is shown)
-let g:airline#extensions#tabline#buffers_label = ''    " can put text here like TABS to denote tabs (I clear it so nothing is shown)
-let g:airline#extensions#tabline#fnamemod = ':t'       " disable file paths in the tab
-let g:airline#extensions#tabline#show_tab_count = 0    " dont show tab numbers on the right
-let g:airline#extensions#tabline#show_buffers = 0      " dont show buffers in the tabline
-let g:airline#extensions#tabline#tab_min_count = 2     " minimum of 2 tabs needed to display the tabline
-let g:airline#extensions#tabline#show_splits = 0       " disables the buffer name that displays on the right of the tabline
-let g:airline#extensions#tabline#show_tab_nr = 0       " disable tab numbers
-let g:airline#extensions#tabline#show_tab_type = 0     " disables the weird ornage arrow on the tablino
 
 " COC
 let g:coc_global_extensions = [ 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver'  ]
@@ -153,7 +134,9 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
-      \   'kitestatus': 'kite#statusline'
+      \   'kitestatus': 'kite#statusline',
+       \   'battery': 'battery#component',
+       \ 'wifi': 'wifi#component',
       \ },
       \ 'colorscheme': 'gruvbox',
       \ 'subseparator': {

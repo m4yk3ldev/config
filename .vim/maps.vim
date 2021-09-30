@@ -1,4 +1,5 @@
 "Nerd Tree
+" shorter commands
 map <C-n> :NERDTreeToggle<CR>
 
 "split navigations

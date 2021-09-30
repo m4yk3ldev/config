@@ -61,4 +61,3 @@ highlight Normal ctermbg=NONE
 set laststatus=2
 
 au BufNewFile,BufRead *.html set filetype=htmldjango
-lua require'colorizer'.setup()
