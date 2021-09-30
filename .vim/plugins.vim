@@ -38,6 +38,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jmcantrell/vim-virtualenv'
+"Plug 'mjbrownie/django_helper.vim'
+"Plug 'lambdalisue/vim-django-support'
+Plug 'tweekmonster/django-plus.vim'
 
 " IDE
 Plug 'editorconfig/editorconfig-vim'

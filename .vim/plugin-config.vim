@@ -19,23 +19,40 @@ let g:kite_snippets=1
 let g:kite_tab_complete=1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=[$HOME.'/configs/.vim/UltiSnips']
+"let g:UltiSnipsSnippetDirectories=[$HOME.'/configs/.vim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-_>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 "  nerdtree
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeAutoDeleteBuffer=1
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
-let NERDTreeShowLineNumbers=1
-let NERDTreeMapOpenInTab='\t'
+" Para comentar
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
 
-" kite
-let g:kite_supported_languages = ['*']
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
 
 " coc
 autocmd FileType scss setl iskeyword+=@-@
@@ -121,8 +138,8 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 " Lightlane
 let g:lightline = {
       \ 'active': {
-      \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-      \   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+      \   'left': [['mode', 'paste'], [], ['virtualenvstatus'], ['relativepath', 'modified']],
+      \   'right': [['kitestatus'], ['battery'], ['wifi'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
       \ },
       \ 'inactive': {
       \   'left': [['inactive'], ['relativepath']],
@@ -130,13 +147,15 @@ let g:lightline = {
       \ },
       \ 'component': {
       \   'bufnum': '%n',
-      \   'inactive': 'inactive'
+      \   'inactive': 'inactive',
+      \ 'lineinfo': ' %3l:%-2v',
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline',
        \   'battery': 'battery#component',
        \ 'wifi': 'wifi#component',
+       \ 'virtualenvstatus': 'virtualenv#statusline',
       \ },
       \ 'colorscheme': 'gruvbox',
       \ 'subseparator': {
@@ -144,3 +163,21 @@ let g:lightline = {
       \   'right': ''
       \ }
       \}
+
+let g:lightline.separator = {
+	\   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+	\   'left': '', 'right': ''
+  \}
+
+let g:lightline.tabline = {
+  \   'left': [ ['tabs'] ],
+  \   'right': [ ['close'] ]
+  \ }
+
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
+
+"DJANGO
+
