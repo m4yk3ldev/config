@@ -1,6 +1,11 @@
 "Nerd Tree
 " shorter commands
 map <C-n> :NERDTreeToggle<CR>
+map <Leader>p :Files<CR>
+nmap <Leader>s <Plug>(easymotion-s2)
+
+" buffers
+map <Leader>ob :Buffers<cr>
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>

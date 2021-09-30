@@ -18,15 +18,8 @@ let g:kite_auto_complete=1
 let g:kite_snippets=1
 let g:kite_tab_complete=1
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsSnippetDirectories=[$HOME.'/configs/.vim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<C-_>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 "  nerdtree
-" Para comentar
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
 
@@ -54,18 +47,30 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
-" coc
+"Mostrar Ocultos
+let NERDTreeShowHidden=1
+
+" Quitar al abrir
+let NERDTreeQuitOnOpen=1
+
+"Eliminar el buffer
+let NERDTreeAutoDeleteBuffer=1
+
+"Cambiar el UI
+let NERDTreeMinimalUI=1
+
+" COC
 autocmd FileType scss setl iskeyword+=@-@
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles
-            \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+                  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 command! -bang -nargs=* Ag
-            \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+                  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 command! -bang -nargs=? -complete=dir Files
-            \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+                  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -104,12 +109,12 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 "let col = float2nr((&columns - width) / 2)
 "let row = float2nr((&lines - height) / 2)
 "let opts = {
-            "\ 'relative': 'editor',
-            "\ 'row': row,
-            "\ 'col': col,
-            "\ 'width': width,
-            "\ 'height': height
-            "\ }
+                  "\ 'relative': 'editor',
+                  "\ 'row': row,
+                  "\ 'col': col,
+                  "\ 'width': width,
+                  "\ 'height': height
+                  "\ }
 "call nvim_open_win(buf, v:true, opts)
 "endfunction
 
@@ -137,44 +142,44 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 
 " Lightlane
 let g:lightline = {
-      \ 'active': {
-      \   'left': [['mode', 'paste'], [], ['virtualenvstatus'], ['relativepath', 'modified']],
-      \   'right': [['kitestatus'], ['battery'], ['wifi'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
-      \ },
-      \ 'inactive': {
-      \   'left': [['inactive'], ['relativepath']],
-      \   'right': [['bufnum']]
-      \ },
-      \ 'component': {
-      \   'bufnum': '%n',
-      \   'inactive': 'inactive',
-      \ 'lineinfo': ' %3l:%-2v',
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
-      \   'kitestatus': 'kite#statusline',
-       \   'battery': 'battery#component',
-       \ 'wifi': 'wifi#component',
-       \ 'virtualenvstatus': 'virtualenv#statusline',
-      \ },
-      \ 'colorscheme': 'gruvbox',
-      \ 'subseparator': {
-      \   'left': '',
-      \   'right': ''
-      \ }
-      \}
+                  \ 'active': {
+                        \   'left': [['mode', 'paste'], [], ['virtualenvstatus'], ['relativepath', 'modified']],
+                        \   'right': [['kitestatus'], ['battery'], ['wifi'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+                        \ },
+                        \ 'inactive': {
+                              \   'left': [['inactive'], ['relativepath']],
+                              \   'right': [['bufnum']]
+                              \ },
+                              \ 'component': {
+                                    \   'bufnum': '%n',
+                                    \   'inactive': 'inactive',
+                                    \ 'lineinfo': ' %3l:%-2v',
+                                    \ },
+                                    \ 'component_function': {
+                                          \   'gitbranch': 'fugitive#head',
+                                          \   'kitestatus': 'kite#statusline',
+                                          \   'battery': 'battery#component',
+                                          \ 'wifi': 'wifi#component',
+                                          \ 'virtualenvstatus': 'virtualenv#statusline',
+                                          \ },
+                                          \ 'colorscheme': 'gruvbox',
+                                          \ 'subseparator': {
+                                                \   'left': '',
+                                                \   'right': ''
+                                                \ }
+                                                \}
 
 let g:lightline.separator = {
-	\   'left': '', 'right': ''
-  \}
+                  \   'left': '', 'right': ''
+                  \}
 let g:lightline.subseparator = {
-	\   'left': '', 'right': ''
-  \}
+                  \   'left': '', 'right': ''
+                  \}
 
 let g:lightline.tabline = {
-  \   'left': [ ['tabs'] ],
-  \   'right': [ ['close'] ]
-  \ }
+                  \   'left': [ ['tabs'] ],
+                  \   'right': [ ['close'] ]
+                  \ }
 
 set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
