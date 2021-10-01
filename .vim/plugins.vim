@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 " syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'preservim/nerdcommenter'
 
 " status bar
 Plug 'maximbaz/lightline-ale'
