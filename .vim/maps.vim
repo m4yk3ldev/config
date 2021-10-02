@@ -39,6 +39,7 @@ if &filetype == "javascript"
     nmap <silent> gy <Plug>(coc-type-definition)
     nmap <silent> gi <Plug>(coc-implementation)
     nmap <silent> gr <Plug>(coc-references)
+    nmap <leader>do <Plug>(coc-codeaction)
     noremap <leader>gs :CocSearch
 elseif &filetype == "python"
     nnoremap <silent> gd <C-]><CR>
