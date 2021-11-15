@@ -50,5 +50,3 @@ if &filetype == "javascript" || &filetype == "python"
 else
     inoremap <silent><expr> <c-space> coc#refresh()
 endif
-
-" Keymap KITE
