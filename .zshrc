@@ -14,3 +14,8 @@ proxy_off(){
 
 alias npm="npm --registry=https://registry.npm.taobao.org"
 alias yarn="yarn --registry=https://registry.npm.taobao.org"
+
+alias rsync-copy="rsync -avz --progress -h"
+alias rsync-move="rsync -avz --progress -h --remove-source-files"
+alias rsync-update="rsync -avzu --progress -h"
+alias rsync-synchronize="rsync -avzu --delete --progress -h"
