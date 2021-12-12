@@ -9,6 +9,6 @@ ln -sf .vimrc ~/.vimrc
 echo "Enviando enlace  a .vim"
 ln -sf .vim ~/.vim
 
-echo "Agregando configuraciones al zsh"
-cat .zshrc >> ~/.zshrc
+#echo "Agregando configuraciones al zsh"
+#cat .zshrc >> ~/.zshrc
 
