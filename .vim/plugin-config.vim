@@ -7,16 +7,16 @@ let g:wifi#update_tabline = 1    " For tabline.
 let g:wifi#update_statusline = 1 " For statusline.
 
 " COC
-let g:coc_global_extensions = [ 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-emmet'  ]
+let g:coc_global_extensions = [ 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-emmet', 'coc-tabnine'  ]
 
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
 
 " KITE
-let g:kite_supported_languages = ['python']
-let g:kite_auto_complete=1
-let g:kite_snippets=1
-let g:kite_tab_complete=1
+"let g:kite_supported_languages = ['python']
+"let g:kite_auto_complete=1
+"let g:kite_snippets=1
+"let g:kite_tab_complete=1
 
 
 "  nerdtree
