@@ -44,7 +44,6 @@ Plug 'tweekmonster/django-plus.vim'
 " IDE
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
