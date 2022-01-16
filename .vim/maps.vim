@@ -9,11 +9,7 @@ let mapleader=" "
 "Nerd Tree
 " shorter commands
 map <C-n> :NERDTreeToggle<CR>
-map <Leader>p :Files<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
-
-" buffers
-map <Leader>ob :Buffers<cr>
 
 " Enable folding with the spacebar
 nnoremap <space> za
@@ -34,21 +30,17 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 " Remap keys for gotos
-if &filetype == "javascript"
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gy <Plug>(coc-type-definition)
-    nmap <silent> gi <Plug>(coc-implementation)
-    nmap <silent> gr <Plug>(coc-references)
-    nmap <leader>do <Plug>(coc-codeaction)
-    noremap <leader>gs :CocSearch
-elseif &filetype == "python"
-    nnoremap <silent> gd <C-]><CR>
-endif
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>do <Plug>(coc-codeaction)
+noremap <leader>gs :CocSearch
 " Use <c-space> to trigger completion.
 if &filetype == "javascript" || &filetype == "python"
-    inoremap <c-space> <C-x><C-u>
+  inoremap <c-space> <C-x><C-u>
 else
-    inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <c-space> coc#refresh()
 endif
 
 " Para Usar fzf
@@ -67,20 +59,20 @@ noremap <C-b> :Buffers<CR>
 
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 ruler
+      \| autocmd BufLeave <buffer> set laststatus=2 ruler
 
 command! -bang -nargs=* Buffers
-  \ call fzf#vim#buffers(
-  \   '',
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:0%', '?'),
-  \   <bang>0)
+      \ call fzf#vim#buffers(
+      \   '',
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \           : fzf#vim#with_preview('right:0%', '?'),
+      \   <bang>0)
 
 command! -bang -nargs=* LinesWithPreview
-    \ call fzf#vim#grep(
-    \   'rg --with-filename --column --line-number --no-heading --color=always --smart-case . '.fnameescape(expand('%')), 1,
-    \   fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --sort'}, 'up:50%', '?'),
-    \   1)
+      \ call fzf#vim#grep(
+      \   'rg --with-filename --column --line-number --no-heading --color=always --smart-case . '.fnameescape(expand('%')), 1,
+      \   fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --sort'}, 'up:50%', '?'),
+      \   1)
 
 command! -bang -nargs=* MRU call fzf#vim#history(fzf#vim#with_preview())
 
