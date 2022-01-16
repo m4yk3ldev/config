@@ -59,11 +59,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod1+F2 exec google-chrome-stable 
-bindsym $mod1+F3 exec code 
 bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F5 exec kitty -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -325,7 +323,6 @@ set_from_resource $term_color15    color15
 bar {
   font pango:FiraCode Nerd Font , FontAwesome 12
   # i3bar_command i3bar
-    # status_command i3status
     status_command i3status-rs $HOME/.i3/theme.toml
     position top
 
@@ -335,30 +332,17 @@ bar {
 
     bindsym button4 nop
     bindsym button5 nop
-#   font xft:URWGothic-Book 11
     strip_workspace_numbers yes
     colors {
       separator #666666
-        # background #222222
-        background #222D31
+        background #2e3440
+        # background #222D31
         statusline #dddddd
         focused_workspace #0088CC #0088CC #ffffff
         active_workspace #333333 #333333 #ffffff
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
-#     colors {
-#         background #222D31
-#         statusline #F9FAF9
-#         separator  #454947
-#
-# #                      border  backgr. text
-#         focused_workspace  #F9FAF9 #16a085 #292F34
-#         active_workspace   #595B5B #353836 #FDF6E3
-#         inactive_workspace #595B5B #222D31 #EEE8D5
-#         binding_mode       #16a085 #2C2C2C #F9FAF9
-#         urgent_workspace   #16a085 #FDF6E3 #E5201D
-#     }
 }
 
 # hide/unhide i3status bar
@@ -372,7 +356,8 @@ client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
 client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
-client.background       #2B2C2B
+# client.background       #2B2C2B
+client.background       #222D31
 
 #############################
 ### settings for i3-gaps: ###
