@@ -3,6 +3,8 @@
 - ripgrep
 - fzf
 - git
+- ccat
+- kitty
 
 ## Como descargar
 

@@ -6,5 +6,5 @@
     "html"
   ],
   "html.format.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","javascript"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","javascript"]
 }
