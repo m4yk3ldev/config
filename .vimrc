@@ -59,5 +59,6 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg=NONE
 set laststatus=2
-
+set background=dark
+let &t_ut=''
 au BufNewFile,BufRead *.html set filetype=htmldjango

@@ -28,6 +28,8 @@ Plug 'powerline/powerline'
 
 " Tree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " typing
 Plug 'alvan/vim-closetag'
