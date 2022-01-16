@@ -5,6 +5,8 @@
 - git
 - ccat
 - kitty
+- ttf-font-awesome
+- i3status-rust
 
 ## Como descargar
 
