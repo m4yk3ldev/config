@@ -1,3 +1,11 @@
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+let mapleader=" "
+
 "Nerd Tree
 " shorter commands
 map <C-n> :NERDTreeToggle<CR>
@@ -6,14 +14,6 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 " buffers
 map <Leader>ob :Buffers<cr>
-
-"split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-let mapleader=" "
 
 " Enable folding with the spacebar
 nnoremap <space> za
@@ -55,10 +55,13 @@ endif
 
 " find file
 noremap \ :FZF<CR>
+
 " find history
 noremap <C-h> :MRU<CR>
+
 " find lines containing keywords
 noremap <C-l> :LinesWithPreview<CR>
+
 " find buffer
 noremap <C-b> :Buffers<CR>
 
