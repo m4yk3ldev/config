@@ -12,13 +12,6 @@ let g:coc_global_extensions = [ 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
 
-" KITE
-"let g:kite_supported_languages = ['python']
-"let g:kite_auto_complete=1
-"let g:kite_snippets=1
-"let g:kite_tab_complete=1
-
-
 "  nerdtree
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
@@ -56,7 +49,7 @@ let NERDTreeQuitOnOpen=1
 "Eliminar el buffer
 let NERDTreeAutoDeleteBuffer=1
 
-"Cambiar el UI
+"Cambiar el U 
 let NERDTreeMinimalUI=1
 
 " COC
@@ -119,7 +112,7 @@ let g:lightline = {
                                           \ 'wifi': 'wifi#component',
                                           \ 'virtualenvstatus': 'virtualenv#statusline',
                                           \ },
-                                          \ 'colorscheme': 'gruvbox',
+                                          \ 'colorscheme': 'tokyonight',
                                           \ 'subseparator': {
                                                 \   'left': '',
                                                 \   'right': ''

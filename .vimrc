@@ -55,10 +55,14 @@ filetype plugin indent on
 filetype plugin on
 
 set termguicolors
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg=NONE
 set laststatus=2
 set background=dark
 let &t_ut=''
-au BufNewFile,BufRead *.html set filetype=htmldjango
+
+let g:tokyonight_style = 'storm' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight

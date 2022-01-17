@@ -8,7 +8,8 @@ let mapleader=" "
 
 "Nerd Tree
 " shorter commands
-map <C-n> :NERDTreeToggle<CR>
+map <C-f> :NERDTreeFind<cr>
+map <C-n> :NERDTreeToggle<CR> 
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " Enable folding with the spacebar

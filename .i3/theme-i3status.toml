@@ -21,7 +21,7 @@ format = "{average}"
 block = "memory"
 display_type = "memory"
 format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
+# format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "cpu"
@@ -31,7 +31,7 @@ format = "{barchart} {utilization}"
 [[block]]
 block = "net"
 device = "wlp1s0"
-format = "{ssid} {signal_strength} {ip}"
+format = " {ssid} {ip}"
 interval = 5
 
 [[block]]
@@ -42,4 +42,4 @@ format = " {percentage} {time}"
 [[block]]
 block = "time"
 interval = 5
-format = "%a %d/%m %r"
+format = "%a %d %r"
