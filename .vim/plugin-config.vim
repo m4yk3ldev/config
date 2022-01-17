@@ -94,7 +94,7 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 let g:lightline = {
                   \ 'active': {
                         \   'left': [['mode', 'paste'], [], ['virtualenvstatus'], ['relativepath', 'modified']],
-                        \   'right': [['kitestatus'], ['battery'], ['wifi'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+                        \   'right': [['battery'], ['wifi'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
                         \ },
                         \ 'inactive': {
                               \   'left': [['inactive'], ['relativepath']],
