@@ -23,6 +23,7 @@ nmap <silent> <F3> <esc>gg=G<esc>
 "Moving Tabs
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
+map <Leader>v <esc>:vsplit<CR>
 let g:javascript_plugin_flow = 1
 
 let g:UltiSnipsExpandTrigger="<tab>"
