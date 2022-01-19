@@ -29,6 +29,7 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " typing
 Plug 'alvan/vim-closetag'

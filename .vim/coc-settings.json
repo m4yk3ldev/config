@@ -5,8 +5,8 @@
     "htmldjango",
     "html"
   ],
-"eslint.autoFixOnSave": true,
- "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "html.format.enable": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","javascript"],
 }
