@@ -8,6 +8,8 @@
 - ttf-font-awesome
 - i3status-rust
 - python-neovim
+- nvm
+- neovim
 
 ### Para NeoVim
 
