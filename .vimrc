@@ -37,7 +37,9 @@ set encoding=utf-8
 set foldmethod=indent
 set foldlevel=99
 
-" Helps force plug-ins to load correctly when it is turned back on below.
+"
+
+"" Helps force plug-ins to load correctly when it is turned back on below.
 filetype off
 
 " Turn on syntax highlighting.
