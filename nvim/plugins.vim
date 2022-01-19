@@ -1,11 +1,15 @@
 
-"if empty(glob('~/.vim/autoload/plug.vim'))
-    "silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-                "\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    "autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-"endif
+let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-call plug#begin(stdpath('data').'/plugged')
+if !filereadable(vimplug_exists)
+    echo "Installing Vim-Plug..."
+    echo ""
+    silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let g:not_finish_vimplug = "yes"
+
+    autocmd VimEnter * PlugInstall
+endif
+call plug#begin(expand('~/.config/nvim/plugged'))
 
 " syntax
 Plug 'sheerun/vim-polyglot'
@@ -51,3 +55,5 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 call plug#end()
+
+filetype plugin indent on

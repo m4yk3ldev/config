@@ -1,5 +1,5 @@
-.vim/plugged
-.vim/autoload
-.vim/pack
+nvim/plugged
+nvim/autoload
+nvim/pack
 .DS_Store
 .netrwhist
