@@ -17,8 +17,6 @@ Plug 'preservim/nerdcommenter'
 " status bar
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
-Plug 'lambdalisue/battery.vim'
-Plug 'lambdalisue/wifi.vim'
 
 " Themes
 Plug 'morhetz/gruvbox'
@@ -41,7 +39,6 @@ Plug 'jiangmiao/auto-pairs'
 " autocomplete
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jmcantrell/vim-virtualenv'
 Plug 'tweekmonster/django-plus.vim'
 
 " IDE

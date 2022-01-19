@@ -1,13 +1,5 @@
-"BATERIA
-let g:battery#update_tabline = 1    " For tabline.
-let g:battery#update_statusline = 1 " For statusline.
-
-"WIFI
-let g:wifi#update_tabline = 1    " For tabline.
-let g:wifi#update_statusline = 1 " For statusline.
-
 " COC
-let g:coc_global_extensions = [ 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-emmet', 'coc-tabnine', 'coc-prettier', 'coc-eslint']
+let g:coc_global_extensions = [ 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-emmet', 'coc-tabnine', 'coc-prettier', 'coc-eslint', 'coc-pyright']
 
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
@@ -93,31 +85,21 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 " Lightlane
 let g:lightline = {
                   \ 'active': {
-                        \   'left': [['mode', 'paste'], [], ['virtualenvstatus'], ['relativepath', 'modified']],
-                        \   'right': [['battery'], ['wifi'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+                        \   'left': [['mode', 'paste'], ['relativepath', 'modified']],
+                        \   'right': [['filetype', 'percent', 'lineinfo'], ['gitbranch']]
                         \ },
-                        \ 'inactive': {
-                              \   'left': [['inactive'], ['relativepath']],
-                              \   'right': [['bufnum']]
+                        \ 'component': {
+                              \ 'lineinfo': ' %3l:%-2v',
                               \ },
-                              \ 'component': {
-                                    \   'bufnum': '%n',
-                                    \   'inactive': 'inactive',
-                                    \ 'lineinfo': ' %3l:%-2v',
+                              \ 'component_function': {
+                                    \   'gitbranch': 'fugitive#head',
                                     \ },
-                                    \ 'component_function': {
-                                          \   'gitbranch': 'fugitive#head',
-                                          \   'kitestatus': 'kite#statusline',
-                                          \   'battery': 'battery#component',
-                                          \ 'wifi': 'wifi#component',
-                                          \ 'virtualenvstatus': 'virtualenv#statusline',
-                                          \ },
-                                          \ 'colorscheme': 'tokyonight',
-                                          \ 'subseparator': {
-                                                \   'left': '',
-                                                \   'right': ''
-                                                \ }
-                                                \}
+                                    \ 'colorscheme': 'tokyonight',
+                                    \ 'subseparator': {
+                                          \   'left': '',
+                                          \   'right': ''
+                                          \ }
+                                          \}
 
 let g:lightline.separator = {
                   \   'left': '', 'right': ''

@@ -58,10 +58,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod1+F2 exec google-chrome-stable 
-bindsym $mod1+F3 exec code 
+bindsym $mod+F2 exec google-chrome-stable 
 bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec kitty -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
