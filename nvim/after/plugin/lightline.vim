@@ -3,15 +3,16 @@
 let g:lightline = {
                   \ 'active': {
                         \   'left': [['mode', 'paste'], ['relativepath', 'modified']],
-                        \   'right': [['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+                        \   'right': [['kitestatus'],['filetype', 'percent', 'lineinfo'], ['gitbranch']]
                         \ },
                         \ 'component': {
                               \ 'lineinfo': ' %3l:%-2v',
                               \ },
                               \ 'component_function': {
                                     \   'gitbranch': 'fugitive#head',
+                                    \'kitestatus': 'kite#statusline',
                                     \ },
-                                    \ 'colorscheme': 'gruvbox',
+                                    \ 'colorscheme': 'tokyonight',
                                     \ 'subseparator': {
                                           \   'left': '',
                                           \   'right': ''

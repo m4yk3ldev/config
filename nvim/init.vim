@@ -54,7 +54,6 @@ set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-
 "}}}
 "
 
@@ -95,3 +94,4 @@ let g:config_file_list = [
 for f in g:config_file_list
     execute 'so ' . g:nvim_config_root . f
 endfor
+lua require'colorizer'.setup()

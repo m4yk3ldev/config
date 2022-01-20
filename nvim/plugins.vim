@@ -17,6 +17,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'preservim/nerdcommenter'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " status bar
 Plug 'maximbaz/lightline-ale'
