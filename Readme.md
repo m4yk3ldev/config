@@ -10,7 +10,7 @@
 - python-neovim
 - nvm
 - neovim
-- fd
+- lsd
 
 ### Para NeoVim
 

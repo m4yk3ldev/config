@@ -34,3 +34,9 @@ proxy_off(){
 alias v="nvim"
 alias vim="nvim"
 EDITOR="nvim"
+
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
