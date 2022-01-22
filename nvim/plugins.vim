@@ -24,8 +24,6 @@ Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 " Themes
-Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'powerline/powerline'
 Plug 'ghifarit53/tokyonight-vim'
