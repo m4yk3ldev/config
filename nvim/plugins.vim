@@ -2,22 +2,23 @@
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
 if !filereadable(vimplug_exists)
-    echo "Installing Vim-Plug..."
-    echo ""
-    silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    let g:not_finish_vimplug = "yes"
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  let g:not_finish_vimplug = "yes"
 
-    autocmd VimEnter * PlugInstall
+  autocmd VimEnter * PlugInstall
 endif
 call plug#begin(expand('~/.config/nvim/plugged'))
 
 " syntax
-Plug 'sheerun/vim-polyglot'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'sheerun/vim-polyglot'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'preservim/nerdcommenter'
 Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " status bar
 Plug 'maximbaz/lightline-ale'
@@ -25,6 +26,7 @@ Plug 'itchyny/lightline.vim'
 
 " Themes
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'powerline/powerline'
 Plug 'ghifarit53/tokyonight-vim'
 
@@ -33,11 +35,15 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/popup.nvim'
 
 " typing
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 
 
 " autocomplete

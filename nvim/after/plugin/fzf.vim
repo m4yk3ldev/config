@@ -1,5 +1,5 @@
 let $FZF_DEFAULT_OPTS='--layout=reverse'
-
+"
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noruler
                   \| autocmd BufLeave <buffer> set laststatus=2 ruler
@@ -18,19 +18,19 @@ command! -bang -nargs=* LinesWithPreview
                   \   1)
 
 command! -bang -nargs=* MRU call fzf#vim#history(fzf#vim#with_preview())
-
-" Para Usar fzf
-
-" find file
-noremap \ :Files<CR>
-
-" find history
-noremap <C-h> :MRU<CR>
-
-" find lines containing keywords
-noremap <C-l> :LinesWithPreview<CR>
-
-" find buffer
-noremap <C-b> :Buffers<CR>
-
-
+"
+" " Para Usar fzf
+"
+" " find file
+" noremap \ :Files<CR>
+"
+" " find history
+" noremap <C-h> :MRU<CR>
+"
+" " find lines containing keywords
+" noremap <C-l> :LinesWithPreview<CR>
+"
+" " find buffer
+" noremap <C-b> :Buffers<CR>
+"
+"
