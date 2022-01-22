@@ -35,6 +35,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'sudormrfbin/cheatsheet.nvim'
 
 " typing
 Plug 'alvan/vim-closetag'
