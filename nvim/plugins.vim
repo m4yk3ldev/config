@@ -19,11 +19,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " status bar
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
+" Plug 'maximbaz/lightline-ale'
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 
 " Themes
-Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'powerline/powerline'
 Plug 'ghifarit53/tokyonight-vim'
@@ -43,7 +43,6 @@ Plug 'windwp/nvim-autopairs'
 
 
 " autocomplete
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tweekmonster/django-plus.vim'
 

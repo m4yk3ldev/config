@@ -34,6 +34,7 @@ set smartcase  " No ignorar mayúsculas si la palabra a buscar contiene mayúscu
 set spelllang=en,es  " Corregir palabras usando diccionarios en inglés y español
 
 set nocompatible  "Para no usar los VI comand 
+set noshowmode
 
 " File types "{{{
 " ---------------------------------------------------------------------

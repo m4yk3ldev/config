@@ -15,8 +15,15 @@ let g:coc_global_extensions = [
       \'coc-pairs',
       \'coc-marketplace',
       \'coc-git',
+      \'coc-htmldjango',
+      \'coc-ultisnips',
+      \'coc-scssmodules',
+      \'coc-xml',
+      \'coc-kite',
+      \'coc-styled-components',
+      \'coc-html-css-support',
+      \'coc-import-cost',
       \]
-
 autocmd FileType scss setl iskeyword+=@-@
 
 let g:javascript_plugin_flow = 1
