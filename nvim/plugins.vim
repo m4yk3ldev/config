@@ -38,6 +38,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " typing
 Plug 'alvan/vim-closetag'
