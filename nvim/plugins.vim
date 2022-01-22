@@ -12,11 +12,9 @@ endif
 call plug#begin(expand('~/.config/nvim/plugged'))
 
 " syntax
-" Plug 'sheerun/vim-polyglot'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'preservim/nerdcommenter'
 Plug 'mxw/vim-jsx'
-" Plug 'pangloss/vim-javascript'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -31,10 +29,8 @@ Plug 'powerline/powerline'
 Plug 'ghifarit53/tokyonight-vim'
 
 " Tree
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
@@ -43,7 +39,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 " typing
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-" Plug 'jiangmiao/auto-pairs'
 Plug 'windwp/nvim-autopairs'
 
 
