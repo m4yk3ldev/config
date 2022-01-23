@@ -23,4 +23,9 @@ let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 set statusline+=%{kite#statusline()}
-
+function! LightlineGitBlame() abort
+  let blame = get(b:, 'coc_git_blame', '')
+  " return blame
+  return winwidth(0) > 120 ? blame : ''
+endfunction
+set statusline += LightlineGitBlame() 
