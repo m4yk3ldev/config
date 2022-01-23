@@ -21,3 +21,6 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+set statusline+=%{kite#statusline()}
+
