@@ -85,14 +85,21 @@ map <Leader>m <esc>:tabnext<CR>
 map <Leader>v <esc>:vsplit<CR>
 
 
- " Cargando todas las configuracions
+" Cargando todas las configuracions
 let g:nvim_config_root = stdpath('config')
 let g:config_file_list = [
-            \'/plugins.vim',
-            \'/theme.vim',
-            \]
+      \'/plugins.vim',
+      \'/theme.vim',
+      \]
 
 for f in g:config_file_list
-    execute 'so ' . g:nvim_config_root . f
+  execute 'so ' . g:nvim_config_root . f
 endfor
 lua require'colorizer'.setup()
+
+" Para cargar los files de VIM
+
+let g:markdown_fenced_languages = [
+      \ 'vim',
+      \ 'help'
+      \]

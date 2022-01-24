@@ -23,6 +23,7 @@ let g:coc_global_extensions = [
       \'coc-styled-components',
       \'coc-html-css-support',
       \'coc-import-cost',
+      \'coc-vimlsp',
       \]
 autocmd FileType scss setl iskeyword+=@-@
 
