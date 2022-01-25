@@ -46,6 +46,7 @@ Plug 'windwp/nvim-autopairs'
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tweekmonster/django-plus.vim'
+Plug 'sirver/ultisnips' |  Plug 'honza/vim-snippets'
 
 " IDE
 Plug 'editorconfig/editorconfig-vim'
