@@ -5,7 +5,6 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.colorProvider = { dynamicRegistration = false }
 
 require'lspconfig'.tailwindcss.setup {
-  handlers = handlers,
   capabilities = capabilities,
   on_attach = function (client, bufnr)
     if client.server_capabilities.colorProvider then

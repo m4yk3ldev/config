@@ -21,7 +21,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 
 -- npm install -g typescript typescript-language-server
 require'lspconfig'.tsserver.setup({
-  handlers = handlers,
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false

@@ -14,9 +14,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-require                       "config.lsp.installer"
-require("config.lsp.handlers").setup()
-require("config.lsp.colors")
-require("config.lsp.config")
--- require("config.lsp.null-ls")
+require                       "user.lsp.installer"
+require("user.lsp.handlers").setup()
+require("user.lsp.colors")
+require("user.lsp.config")
+require("user.lsp.null-ls")
 

@@ -67,3 +67,4 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Para dividar pantalla
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
+keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)

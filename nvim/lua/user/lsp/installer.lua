@@ -19,11 +19,11 @@ lsp_installer.on_server_ready(function(server)
     }
 
     if server.name == "bash" then
-      opts.settings = require('config.lsp.servers.bash').settings
+      opts.settings = require('user.lsp.servers.bash').settings
     end
 
     if server.name == "cssls" then
-      opts.settings = require('config.lsp.servers.css').settings
+      opts.settings = require('user.lsp.servers.css').settings
     end
 
     if server.name == "eslint" then
@@ -33,20 +33,20 @@ lsp_installer.on_server_ready(function(server)
             client.resolved_capabilities.document_formatting = true
             on_attach(client, bufnr)
         end
-        opts.settings = require('config.lsp.servers.eslint').settings
+        opts.settings = require('user.lsp.servers.eslint').settings
     end
 
     if server.name == "html" then
-      opts.capabilities = require('config.lsp.servers.html').capabilities
-      opts.settings = require('config.lsp.servers.html').settings
+      opts.capabilities = require('user.lsp.servers.html').capabilities
+      opts.settings = require('user.lsp.servers.html').settings
     end
 
     if server.name == "jsonls" then
-      opts.settings = require('config.lsp.servers.json').settings
+      opts.settings = require('user.lsp.servers.json').settings
     end
 
     if server.name == "sumneko_lua" then
-      opts.settings = require('config.lsp.servers.lua').settings
+      opts.settings = require('user.lsp.servers.lua').settings
     end
 
     -- (How to) Customize the options passed to the server
@@ -55,7 +55,7 @@ lsp_installer.on_server_ready(function(server)
     --     opts.on_attach = function(client, bufnr) ... end
     -- end
 
-    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    -- This setup() function is exactly the same as lspuser.s setup function (:help lspuser.quickstart)
     server:setup(opts)
     vim.cmd [[ do User LspAttachBuffers ]]
 end)
