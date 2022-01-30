@@ -1,5 +1,5 @@
-require('impatient') -- This needs to be first
-require "config.config" -- Para cargar todas las configuraciones básicas
+-- require('impatient') -- This needs to be first
+require                            "config.config" -- Para cargar todas las configuraciones básicas
 require "config.keymap" -- Cargando keyboard principales
 require "config.plugin" -- Cargando los plugins
 require "config.packer_cmd" -- Para cargar todas las configuraciones packer_cmd
