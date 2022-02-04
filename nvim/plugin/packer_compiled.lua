@@ -194,6 +194,16 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-pairs"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-treesitter-pairs",
+    url = "https://github.com/theHamsta/nvim-treesitter-pairs"
+  },
+  ["nvim-treesitter-refactor"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
+  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
@@ -248,6 +258,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
   ["vim-styled-components"] = {
     loaded = true,
