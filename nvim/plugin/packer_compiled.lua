@@ -259,6 +259,11 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
+  },
   ["vim-jsx-pretty"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
