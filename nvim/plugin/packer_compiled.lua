@@ -249,11 +249,6 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
-  ["vim-jsx"] = {
-    loaded = true,
-    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-jsx",
-    url = "https://github.com/mxw/vim-jsx"
-  },
   ["vim-styled-components"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-styled-components",

@@ -9,7 +9,7 @@ configs.setup({
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {
 		enable = true, -- false will disable the whole extension
-		additional_vim_regex_highlighting = true,
+		additional_vim_regex_highlighting = false,
 	},
 	autopairs = {
 		enable = true,
@@ -40,5 +40,9 @@ configs.setup({
 	},
 })
 
--- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
--- parser_config.tsx.used_by = { "javascript", "typescript.tsx", "javascript.tsx" }
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+parser_config.typescript.used_by = "javascriptflow"
+parser_config.tsx.used_by = { "javascript", "typescript.tsx", "javascript.tsx" }
+
+require("vim.treesitter.query").set_query("c", "injections", "(comment) @comment")
+require("nvim-treesitter.install").prefer_git = true
