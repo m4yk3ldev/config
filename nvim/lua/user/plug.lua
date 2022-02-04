@@ -60,7 +60,7 @@ return packer.startup(function(use)
 	use("mxw/vim-jsx")
 	use("styled-components/vim-styled-components")
 	use("akinsho/toggleterm.nvim")
-  use("folke/trouble.nvim")
+	use("folke/trouble.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
