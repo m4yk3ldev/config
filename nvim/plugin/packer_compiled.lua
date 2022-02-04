@@ -253,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-styled-components",
     url = "https://github.com/styled-components/vim-styled-components"
+  },
+  ["vim-vscode-snippets"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-vscode-snippets",
+    url = "https://github.com/stevearc/vim-vscode-snippets"
   }
 }
 
