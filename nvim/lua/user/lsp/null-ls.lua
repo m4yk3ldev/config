@@ -13,10 +13,11 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-    formatting.djhtml,
-    formatting.autopep8,
-    diagnostics.eslint,
-    diagnostics.stylelint,
+		formatting.djhtml,
+		formatting.autopep8,
+		diagnostics.eslint,
+		diagnostics.stylelint,
+		diagnostics.pylint,
 	},
 })
 -- require("lspconfig")["null-ls"].setup({ ... })
