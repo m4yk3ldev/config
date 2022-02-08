@@ -17,7 +17,7 @@ plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock )
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 proxy_on() {
-    export {http,https,ftp}_proxy='proxy:port'
+    export {http,https,ftp}_proxy='http://10.12.7.254:3128'
     export no_proxy="localhost,127.0.0.1"
 }
 
