@@ -68,3 +68,10 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Para dividar pantalla
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
 keymap("n", "<F2>", "<cmd>ToggleTerm<cr>", opts)
+-- SymbolsOutline
+keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
+-- ForceWrite
+keymap("n", "<C-w>", "<cmd>w!<CR>", opts)
+
+-- ForceQuit
+keymap("n", "<C-q>", "<cmd>q!<CR>", opts)
