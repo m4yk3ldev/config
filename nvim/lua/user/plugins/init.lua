@@ -9,3 +9,4 @@ require("user.plugins.gitsigns") -- Cargando user.racion de GIT
 require("user.plugins.toggleterm") -- Cargando Toggle Term
 require("user.plugins.bufferline") -- Cargando Buffer line
 require("user.plugins.trouble") -- Cargando Troubles
+require("user.plugins.symbols_outline") -- Cargando Symbol Outline
