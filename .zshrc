@@ -41,5 +41,4 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-# BROWSER="google-chrome-stable"
-BROWSER="vivaldi-stable"
+BROWSER="google-chrome-stable"
