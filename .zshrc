@@ -17,7 +17,7 @@ plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock )
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 proxy_on() {
-    export {http,https,ftp}_proxy='http://10.12.7.254:3128'
+    export {http,https,ftp}_proxy='http://localhost:8080'
     export no_proxy="localhost,127.0.0.1"
 }
 
@@ -41,4 +41,5 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-BROWSER="google-chrome-stable"
+# BROWSER="google-chrome-stable"
+BROWSER="vivaldi-stable"
