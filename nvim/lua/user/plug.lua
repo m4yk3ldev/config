@@ -51,7 +51,6 @@ return packer.startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
-	use("folke/tokyonight.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
@@ -62,6 +61,7 @@ return packer.startup(function(use)
 	use("styled-components/vim-styled-components")
 	use("akinsho/toggleterm.nvim")
 	use("folke/trouble.nvim")
+	use("sainnhe/gruvbox-material")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
