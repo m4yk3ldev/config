@@ -7,6 +7,10 @@ ln -sfv $PWD/.i3/config $HOME/.i3/config
 echo "Agregando configuraciones al zsh"
 ln -sfv $PWD/.zshrc  $HOME/.zshrc
 
+
+echo "Agregando configuraciones al zsh"
+ln -sfv $PWD/.p10k.zsh  $HOME/.p10k.zsh
+
 echo "Agregando configuraciones de Kitty"
 mkdir -p $HOME/.config/kitty/
 ln -sfv $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
