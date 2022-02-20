@@ -61,7 +61,8 @@ return packer.startup(function(use)
 	use("styled-components/vim-styled-components")
 	use("akinsho/toggleterm.nvim")
 	use("folke/trouble.nvim")
-	use("sainnhe/gruvbox-material")
+	-- use("sainnhe/gruvbox-material")
+  use 'folke/tokyonight.nvim'
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin

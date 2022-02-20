@@ -5,12 +5,18 @@
 - git
 - ccat
 - kitty
-- ttf-font-awesome
 - i3status-rust
 - python-neovim
 - nvm
 - neovim
 - lsd
+
+### Para el Desktop
+
+## Applet
+
+- volumeicon
+- nm-applet
 
 ### Para NeoVim
 

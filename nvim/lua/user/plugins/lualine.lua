@@ -56,7 +56,7 @@ end
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = 'gruvbox-material',
+    theme = 'tokyonight',
     disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
     always_divide_middle = true,
   },
