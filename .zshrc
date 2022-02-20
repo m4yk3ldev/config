@@ -39,7 +39,7 @@ alias v="nvim"
 alias vim="nvim"
 EDITOR="nvim"
 
-alias ls='lsd'
+alias ls='exa --icons'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
