@@ -17,3 +17,8 @@ ln -sfv $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 
 echo "Agregando configuraciones de i3status"
 ln -sfv $PWD/.i3/theme-i3status.toml $HOME/.i3/theme.toml
+
+
+echo "Agregando configuraciones de Rofi"
+mkdir -p $HOME/.config/rofi/
+ln -sfv $PWD/rofi/config.rasi $HOME/.config/rofi/config.rasi
