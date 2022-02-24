@@ -22,7 +22,6 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# font xft:URWGothic-Book 11
 font xft:Hack Nerd Font Mono:size=12
 
 # Use Mouse+$mod to drag floating windows
@@ -313,7 +312,7 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-    font pango:Hack Nerd Font, FontAwesome 12
+    font pango:FiraCode Nerd Font, FontAwesome 12
   # i3bar_command i3bar
     # status_command i3status
     status_command i3status-rs $HOME/.i3/theme.toml
