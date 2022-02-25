@@ -10,7 +10,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock yarn npm archlinux)
+plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock yarn npm archlinux adb battery colored-man-pages)
 
 [[ ! -f $ZSH/oh-my-zsh.sh  ]] || source $ZSH/oh-my-zsh.sh
 
@@ -19,11 +19,13 @@ plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock yarn npm a
 proxy_on() {
     export {http,https,ftp}_proxy='http://localhost:8080'
     export no_proxy="localhost,127.0.0.1"
+    echo -e 'Proxy local'
 }
 
 proxy_hhb() {
     export {http,https,ftp}_proxy='http://10.12.7.254:3128'
     export no_proxy="localhost,127.0.0.1,sld.cu,10.12.7.0/22"
+    echo -e 'Proxy HHB'
 }
 proxy_off(){
     unset http_proxy

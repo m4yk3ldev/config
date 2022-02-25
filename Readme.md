@@ -10,6 +10,7 @@
 - nvm
 - neovim
 - lsd
+- wezterm
 
 ### Para el Desktop
 
