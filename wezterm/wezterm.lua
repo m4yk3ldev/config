@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 return {
- -- color_scheme = "Arthur",
- color_scheme = "Ayu Mirage",
+	-- color_scheme = "Arthur",
+	color_scheme = "Ayu Mirage",
 	font = wezterm.font({
 		family = "FiraCode Nerd Font Mono",
 		font_size = 12.0,
@@ -11,5 +11,5 @@ return {
 		hue = 1.0,
 		saturation = 1.0,
 	},
-   -- window_background_image = "/path/to/wallpaper.jpg"
+	window_background_image = "/home/maykel/config/wezterm/wall.jpg",
 }
