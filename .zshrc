@@ -46,6 +46,4 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias ssh="kitty +kitten ssh"
-
 BROWSER="google-chrome-stable"

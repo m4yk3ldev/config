@@ -20,4 +20,3 @@ null_ls.setup({
 		diagnostics.pylint,
 	},
 })
--- require("lspconfig")["null-ls"].setup({ ... })
