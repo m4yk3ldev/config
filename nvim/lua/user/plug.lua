@@ -50,6 +50,7 @@ return packer.startup(function(use)
 	use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
+  use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
 
 	use("nvim-lualine/lualine.nvim")
 	use("kyazdani42/nvim-web-devicons")

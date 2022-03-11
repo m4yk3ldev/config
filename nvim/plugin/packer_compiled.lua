@@ -209,6 +209,11 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
