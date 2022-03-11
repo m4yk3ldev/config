@@ -50,7 +50,7 @@ return packer.startup(function(use)
 	use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
-  use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
+	use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
 
 	use("nvim-lualine/lualine.nvim")
 	use("kyazdani42/nvim-web-devicons")
@@ -62,7 +62,6 @@ return packer.startup(function(use)
 	use("styled-components/vim-styled-components")
 	use("akinsho/toggleterm.nvim")
 	use("folke/trouble.nvim")
-	-- use 'folke/tokyonight.nvim'
 	use("rebelot/kanagawa.nvim")
 
 	-- cmp plugins
@@ -98,6 +97,8 @@ return packer.startup(function(use)
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("simrat39/symbols-outline.nvim")
+	use("edluffy/hologram.nvim")
+  use("nvim-telescope/telescope-media-files.nvim")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")

@@ -17,4 +17,11 @@ require("telescope").setup({
 			".vscode",
 		},
 	},
+	extensions = {
+		media_files = {
+			filetypes = { "png", "webp", "jpg", "jpeg" },
+			find_cmd = "rg", -- find command (defaults to `fd`)
+		},
+	},
 })
+require('telescope').load_extension('media_files')
