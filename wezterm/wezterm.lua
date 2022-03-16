@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 return {
-	-- color_scheme = "Arthur",
 	color_scheme = "Ayu Mirage",
 	font = wezterm.font({
 		family = "FiraCode Nerd Font Mono",
