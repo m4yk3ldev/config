@@ -275,7 +275,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id nm-applet
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 1000 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -324,11 +324,9 @@ bar {
 
     bindsym button4 nop
     bindsym button5 nop
-#   font xft:URWGothic-Book 11
     strip_workspace_numbers yes
     colors {
       separator #666666
-        # background #222222
         background #222D31
         statusline #dddddd
         focused_workspace #0088CC #0088CC #ffffff
@@ -336,18 +334,6 @@ bar {
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
-#     colors {
-#         background #222D31
-#         statusline #F9FAF9
-#         separator  #454947
-#
-# #                      border  backgr. text
-#         focused_workspace  #F9FAF9 #16a085 #292F34
-#         active_workspace   #595B5B #353836 #FDF6E3
-#         inactive_workspace #595B5B #222D31 #EEE8D5
-#         binding_mode       #16a085 #2C2C2C #F9FAF9
-#         urgent_workspace   #16a085 #FDF6E3 #E5201D
-#     }
 }
 
 # hide/unhide i3status bar
