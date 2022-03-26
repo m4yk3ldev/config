@@ -14,7 +14,13 @@ keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>
 keymap("n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
 keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+keymap("n", "<C-a>", "ggVG", opts)
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
+
+-- NvimTree mapping
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
+keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 
 -- Para automostar la documenrtaione
 

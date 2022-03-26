@@ -28,8 +28,6 @@ lsp_installer.on_server_ready(function(server)
 
     if server.name == "eslint" then
         opts.on_attach = function (client, bufnr)
-            -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
-            -- the resolved capabilities of the eslint server ourselves!
             client.resolved_capabilities.document_formatting = true
             on_attach(client, bufnr)
         end
@@ -48,12 +46,6 @@ lsp_installer.on_server_ready(function(server)
     if server.name == "sumneko_lua" then
       opts.settings = require('user.lsp.servers.lua').settings
     end
-
-    -- (How to) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    --     opts.on_attach = function(client, bufnr) ... end
-    -- end
 
     -- This setup() function is exactly the same as lspuser.s setup function (:help lspuser.quickstart)
     server:setup(opts)

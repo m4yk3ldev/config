@@ -14,9 +14,8 @@ null_ls.setup({
 		formatting.eslint,
 		formatting.stylua,
 		formatting.djhtml,
-		formatting.autopep8,
+    formatting.autopep8,
 		diagnostics.eslint,
 		diagnostics.stylelint,
-		diagnostics.pylint,
 	},
 })

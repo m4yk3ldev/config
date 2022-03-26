@@ -98,7 +98,7 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 	use("simrat39/symbols-outline.nvim")
 	use("edluffy/hologram.nvim")
-  use("nvim-telescope/telescope-media-files.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
