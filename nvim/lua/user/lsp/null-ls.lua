@@ -7,15 +7,47 @@ end
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
+local code_actions = null_ls.builtins.code_actions
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/completion
+local completion = null_ls.builtins.completion
 
 null_ls.setup({
 	debug = false,
 	sources = {
+		completion.luasnip,
+		completion.spell,
+		completion.tags,
+		completion.vsnip,
+		code_actions.eslint,
+		code_actions.gitsigns,
+		diagnostics.eslint,
+		diagnostics.stylelint,
+		diagnostics.alex,
+		diagnostics.checkmake,
+		diagnostics.djlint,
+		diagnostics.jsonlint,
+		diagnostics.ktlint,
+		diagnostics.luacheck,
+		diagnostics.misspell,
+		diagnostics.shellcheck,
+		diagnostics.sqlfluff,
+		diagnostics.tidy,
+		diagnostics.yamllint,
+		diagnostics.zsh,
 		formatting.eslint,
 		formatting.stylua,
 		formatting.djhtml,
-    formatting.autopep8,
-		diagnostics.eslint,
-		diagnostics.stylelint,
+		formatting.autopep8,
+		formatting.fixjson,
+		formatting.gofmt,
+		formatting.isort,
+		formatting.ktlint,
+		formatting.perltidy,
+		formatting.pg_format,
+		formatting.stylelint,
+		formatting.tidy,
+		formatting.trim_newlines,
+		formatting.trim_whitespace,
 	},
 })
