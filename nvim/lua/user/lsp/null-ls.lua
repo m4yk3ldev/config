@@ -15,9 +15,6 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	debug = false,
 	sources = {
-		completion.luasnip,
-		completion.spell,
-		completion.tags,
 		code_actions.eslint,
 		code_actions.gitsigns,
 		diagnostics.eslint,
