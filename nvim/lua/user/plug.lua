@@ -36,7 +36,7 @@ packer.init({
 			return require("packer.util").float({ border = "rounded" })
 		end,
 	},
-  max_jobs=1
+	max_jobs = 1,
 })
 
 -- Install your plugins here
@@ -49,7 +49,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
-	use("akinsho/bufferline.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "kyazdani42/nvim-web-devicons" })
 	use("moll/vim-bbye")
 	use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
 
@@ -61,7 +61,7 @@ return packer.startup(function(use)
 	use("pangloss/vim-javascript")
 	use("maxmellon/vim-jsx-pretty")
 	use("styled-components/vim-styled-components")
-	use("akinsho/toggleterm.nvim")
+	use({ "akinsho/toggleterm.nvim", branch = "main" })
 	use("folke/trouble.nvim")
 	use("rebelot/kanagawa.nvim")
 
