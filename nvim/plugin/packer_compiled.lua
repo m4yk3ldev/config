@@ -289,11 +289,6 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
-  ["vim-styled-components"] = {
-    loaded = true,
-    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-styled-components",
-    url = "https://github.com/styled-components/vim-styled-components"
-  },
   ["vim-vscode-snippets"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/vim-vscode-snippets",
