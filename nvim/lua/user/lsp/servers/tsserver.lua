@@ -44,7 +44,7 @@ require'lspconfig'.tsserver.setup({
         eslint_opts = {
           -- diagnostics_format = "#{m} [#{c}]",
           condition = function(utils)
-              return utils.root_has_file(".eslintrc.js")
+              return utils.root_has_file(".eslintrc")
           end,
         },
 

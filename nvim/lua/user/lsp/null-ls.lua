@@ -24,7 +24,6 @@ null_ls.setup({
 		diagnostics.djlint,
 		diagnostics.jsonlint,
 		diagnostics.ktlint,
-		diagnostics.luacheck,
 		diagnostics.shellcheck,
 		diagnostics.sqlfluff,
 		diagnostics.yamllint,

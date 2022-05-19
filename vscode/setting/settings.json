@@ -1,0 +1,87 @@
+{
+  "color-highlight.markerType": "dot-before",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "bracketPairColorizer.depreciation-notice": false,
+  "tabnine.experimentalAutoImports": true,
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint",
+    "source.addMissingImports",
+    "source.fixAll.eslint"
+  ],
+  "eslint.alwaysShowStatus": true,
+  "[json][jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "onFocusChange",
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.language": "en,es",
+  "vim.easymotion": true,
+  "vim.enableNeovim": true,
+  "vim.leader": " ",
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "terminal.external.linuxExec": "/usr/bin/wezterm",
+  "workbench.colorTheme": "Kanagawa Vscode",
+  "editor.bracketPairColorization.enabled": true,
+  "thunder-client.codeSnippetLanguage": "python-requests",
+  "cSpell.userWords": [
+    "ãàáäâáº",
+    "aaaaaeeeeeiiiiooooouuuunc",
+    "anull",
+    "breadcum",
+    "caae",
+    "createlead",
+    "èéëêìíïîõòóöôùúüûñç",
+    "esnext",
+    "fontawesome",
+    "fortawesome",
+    "gsap",
+    "kiero",
+    "Kiero",
+    "klaviyo",
+    "Klaviyo",
+    "Linkedin",
+    "Pinterest",
+    "publicacion",
+    "reduxjs",
+    "setparams",
+    "Wafleras",
+    "whatsapp",
+    "Youtube",
+    "zoho"
+  ],
+  "terminal.integrated.shellIntegration.enabled": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.linkedEditing": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "cssModules.camelCase": true,
+  "workbench.sideBar.location": "right",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "javascript": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "quokka.showStartViewOnFeatureRelease": false
+}
