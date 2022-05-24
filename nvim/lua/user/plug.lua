@@ -53,8 +53,10 @@ return packer.startup(function(use)
 	use("moll/vim-bbye")
 	use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
 
-	use("nvim-lualine/lualine.nvim")
-	use("kyazdani42/nvim-web-devicons")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 	use("kyazdani42/nvim-tree.lua")
 	use("norcalli/nvim-colorizer.lua")
 	use("folke/lsp-colors.nvim")
@@ -71,26 +73,27 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- Cargando tambien LSP
-	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
+	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Para el Tabnine
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-	use("stevearc/vim-vscode-snippets")
+	use("stevearc/vim-vscode-snippets") -- Usar los snippets del Vscode
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("onsails/lspkind-nvim") -- Para los iconos
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+	use({ "styled-components/vim-styled-components", branch = "main" }) -- Cargar los estilos del styled-components
 
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-	})
-	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use("p00f/nvim-ts-rainbow")
+	}) -- Instalar optimizacion del parse files
+	use("JoosepAlviste/nvim-ts-context-commentstring") -- Para reconocer los commentarios
+	use("p00f/nvim-ts-rainbow") -- Adornar las chaves
 	use("nvim-treesitter/nvim-treesitter-refactor")
 	use("theHamsta/nvim-treesitter-pairs")
 

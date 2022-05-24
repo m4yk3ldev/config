@@ -10,17 +10,18 @@ end
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-  symbols ={error = ' ', warn = ' ', info = ' ', hint = ' '},
+	symbols = { error = " ", warn = " ", info = " ", hint = " " },
 	colored = true,
 	update_in_insert = true,
 }
 
 local diff = {
-	"diff",
 	colored = true,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  cond = hide_in_width
-}
+	cond = hide_in_width,
+  'diff',
+  -- Is it me or the symbol for modified us really weird
+  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+ }
 
 local filetype = {
 	"filetype",
@@ -53,30 +54,49 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+local load_lsp = {
+	-- Lsp server name .
+	function()
+		local msg = "No LSP"
+		local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
+		local clients = vim.lsp.get_active_clients()
+		if next(clients) == nil then
+			return msg
+		end
+		for _, client in ipairs(clients) do
+			local filetypes = client.config.filetypes
+			if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+				return client.name
+			end
+		end
+		return msg
+	end,
+	icon = " LSP:",
+	color = { fg = "#ffffff", gui = "bold" },
+}
 lualine.setup({
-  options = {
-    icons_enabled = true,
-    theme = 'onedark',
-    disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
-    always_divide_middle = true,
-  },
-  sections = {
-   lualine_a = { "mode" },
-    lualine_b = { branch, diagnostics },
-    lualine_c = {},
-    lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_y = { location },
-    lualine_z = { progress },
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = { "filename" },
-    lualine_x = { "location" },
-    lualine_y = {},
-    lualine_z = {},
-  },
-  tabline = {},
-  extensions = {"nvim-tree","fugitive"},
+	options = {
+		icons_enabled = true,
+		theme = "onedark",
+		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
+		always_divide_middle = true,
+	},
+	sections = {
+		lualine_a = { "mode" },
+		lualine_b = { branch, diagnostics },
+		lualine_c = {},
+		lualine_x = { load_lsp, diff, spaces, "encoding", filetype },
+		lualine_y = { location },
+		lualine_z = { progress },
+	},
+	inactive_sections = {
+		lualine_a = {},
+		lualine_b = {},
+		lualine_c = { "filename" },
+		lualine_x = { "location" },
+		lualine_y = {},
+		lualine_z = {},
+	},
+	tabline = {},
+	extensions = { "nvim-tree", "fugitive" },
 })
-
