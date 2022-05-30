@@ -23,11 +23,6 @@ proxy_on() {
     echo -e 'Proxy local'
 }
 
-proxy_hhb() {
-    export {http,https,ftp}_proxy='http://10.12.7.254:3128'
-    export no_proxy="localhost,127.0.0.1,sld.cu,10.12.7.0/22"
-    echo -e 'Proxy HHB'
-}
 proxy_off(){
     unset http_proxy
     unset https_proxy
