@@ -17,19 +17,6 @@ plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock yarn npm a
 
 [[ ! -f $ZSH/oh-my-zsh.sh  ]] || source $ZSH/oh-my-zsh.sh
 
-proxy_on() {
-    export {http,https,ftp}_proxy='http://localhost:8080'
-    export no_proxy="localhost,127.0.0.1"
-    echo -e 'Proxy local'
-}
-
-proxy_off(){
-    unset http_proxy
-    unset https_proxy
-    unset ftp_proxy
-    unset rsync_proxy
-    echo -e "Proxy environment variable removed."
-}
 
  [[ ! -f /usr/share/nvm/init-nvm.sh ]] || source /usr/share/nvm/init-nvm.sh
 
