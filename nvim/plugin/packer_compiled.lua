@@ -254,6 +254,11 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/python-syntax",
     url = "https://github.com/vim-python/python-syntax"
   },
+  ["rest.nvim"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/rest.nvim",
+    url = "https://github.com/NTBBloodbath/rest.nvim"
+  },
   ["symbols-outline.nvim"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",

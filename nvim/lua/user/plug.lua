@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
   use("numToStr/Comment.nvim") -- Easily comment stuff
   use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
-  use"kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-web-devicons"
   use({ "akinsho/bufferline.nvim", tag = "*" })
   use("moll/vim-bbye")
   use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
@@ -108,6 +108,9 @@ return packer.startup(function(use)
   -- git
   use("lewis6991/gitsigns.nvim")
   use("sindrets/diffview.nvim")
+
+  -- Rest API
+  use({ "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" })
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

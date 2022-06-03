@@ -10,3 +10,4 @@ require("user.plugins.toggleterm") -- Cargando Toggle Term
 require("user.plugins.bufferline") -- Cargando Buffer line
 require("user.plugins.trouble") -- Cargando Troubles
 require("user.plugins.symbols_outline") -- Cargando Symbol Outline
+require("user.plugins.rest") -- Cargando RestNvim
