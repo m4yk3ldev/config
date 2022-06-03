@@ -42,3 +42,5 @@ vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
 vim.opt.spelllang = "es,en" -- Corregir palabras usando diccionarios en inglés y español
 vim.opt.rnu = true -- Mostrar numeros corridos
 vim.opt.title = true -- Mostrar el nombre del fichero en el titulo
+
+vim.cmd("let python_highlight_all = 1")
