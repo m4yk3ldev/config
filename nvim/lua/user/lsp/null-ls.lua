@@ -26,6 +26,7 @@ null_ls.setup({
     diagnostics.sqlfluff,
     diagnostics.yamllint,
     diagnostics.zsh,
+    diagnostics.eslint,
     formatting.djhtml,
     formatting.autopep8,
     formatting.fixjson,
@@ -36,5 +37,6 @@ null_ls.setup({
     formatting.pg_format,
     formatting.trim_newlines,
     formatting.trim_whitespace,
+    formatting.eslint,
   },
 })
