@@ -23,8 +23,8 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 require'lspconfig'.tsserver.setup({
   capabilities = capabilities,
   on_attach = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = true
-    client.resolved_capabilities.document_range_formatting = true
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
 
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
     buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -36,11 +36,11 @@ require'lspconfig'.tsserver.setup({
         import_all_timeout = 5000, -- ms
 
         -- eslint
-        eslint_enable_code_actions = true,
+        eslint_enable_code_actions = false,
         eslint_enable_disable_comments = false,
         eslint_bin = 'eslint',
         eslint_config_fallback = nil,
-        eslint_enable_diagnostics = true,
+        eslint_enable_diagnostics = false,
         eslint_opts = {
           diagnostics_format = "#{m} [#{c}]",
           condition = function(utils)

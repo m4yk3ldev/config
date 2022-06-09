@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["cheat-sheet"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/cheat-sheet",
+    url = "https://github.com/Djancyp/cheat-sheet"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/cmp-buffer",

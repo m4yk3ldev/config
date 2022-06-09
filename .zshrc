@@ -22,14 +22,14 @@ plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock yarn npm a
 
 alias v="nvim"
 alias vim="nvim"
-EDITOR="nvim"
+export EDITOR="nvim"
 
 alias ls='exa --icons'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-BROWSER="google-chrome-stable"
+export BROWSER="google-chrome-stable"
 alias cnpm='npm --registry=http://nexus.prod.uci.cu/repository/npm-all/'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
