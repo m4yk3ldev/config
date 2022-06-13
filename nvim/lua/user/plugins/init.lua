@@ -1,3 +1,4 @@
+require("user.plugins.notify") -- Cargando Notify
 require("user.plugins.tree") -- Cargado Nvim-Tree
 require("user.plugins.lualine") -- Cargando Lualine
 require("user.plugins.telescope") -- Cargando Lualine
@@ -13,5 +14,4 @@ require("user.plugins.symbols_outline") -- Cargando Symbol Outline
 require("user.plugins.rest") -- Cargando RestNvim
 require("user.plugins.cheat") -- Cargando las Cheats
 require("user.plugins.gps") -- Cargo GPS
-require("user.plugins.notify") -- Cargando Notify
 require("user.plugins.project") -- Cargando Project
