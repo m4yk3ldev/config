@@ -19,7 +19,7 @@ end
 vim.cmd([[
 augroup packer_user_config
 autocmd!
-autocmd BufWritePost plug.lua source <afile> | PackerInstall
+autocmd BufWritePost plug.lua source <afile> | PackerSync
 augroup end
 ]])
 
@@ -43,7 +43,7 @@ packer.init({
 return packer.startup(function(use)
   -- My plugins here
   use("wbthomason/packer.nvim") -- Have packer manage itself
-  use({ "lewis6991/impatient.nvim", rocks = "mpack" })
+  use("lewis6991/impatient.nvim")
   use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
   use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
   use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
@@ -132,7 +132,7 @@ return packer.startup(function(use)
   use("sindrets/diffview.nvim")
 
   -- Rest API
-  use({ "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" })
+  use("NTBBloodbath/rest.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
