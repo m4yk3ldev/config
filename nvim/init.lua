@@ -1,4 +1,7 @@
-require("impatient") -- This needs to be first
+local impatient_ok, impatient = pcall(require, "impatient")
+if impatient_ok then
+  impatient.enable_profile()
+end
 require("user.config") -- Para cargar todas las configuraciones básicas
 require("user.keymap") -- Cargando keyboard principales
 require("user.plug") -- Cargando los plugins

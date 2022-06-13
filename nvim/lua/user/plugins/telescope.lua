@@ -25,3 +25,5 @@ require("telescope").setup({
 	},
 })
 require('telescope').load_extension('media_files')
+require("telescope").load_extension("notify")
+require('telescope').load_extension('projects')

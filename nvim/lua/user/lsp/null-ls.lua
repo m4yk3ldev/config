@@ -13,30 +13,10 @@ local code_actions = null_ls.builtins.code_actions
 local completion = null_ls.builtins.completion
 
 null_ls.setup({
-  debug = false,
+  debug = true,
   sources = {
-    code_actions.eslint,
-    code_actions.gitsigns,
-    diagnostics.alex,
-    diagnostics.checkmake,
-    diagnostics.djlint,
-    diagnostics.jsonlint,
-    diagnostics.ktlint,
-    diagnostics.shellcheck,
-    diagnostics.sqlfluff,
-    diagnostics.yamllint,
-    diagnostics.zsh,
-    diagnostics.eslint,
-    formatting.djhtml,
-    formatting.autopep8,
-    formatting.fixjson,
-    formatting.gofmt,
-    formatting.isort,
-    formatting.ktlint,
-    formatting.perltidy,
-    formatting.pg_format,
-    formatting.trim_newlines,
-    formatting.trim_whitespace,
+    formatting.rufo,
     formatting.eslint,
+    diagnostics.rubocop,
   },
 })

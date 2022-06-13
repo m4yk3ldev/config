@@ -124,6 +124,27 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot-cmp"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/opt/copilot-cmp",
+    url = "https://github.com/zbirenbaum/copilot-cmp"
+  },
+  ["copilot.lua"] = {
+    after = { "copilot-cmp" },
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fcopilot\frequire-\1\0\4\0\3\0\0066\0\0\0009\0\1\0003\2\2\0)\3d\0B\0\3\1K\0\1\0\0\rdefer_fn\bvim\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/opt/copilot.lua",
+    url = "https://github.com/zbirenbaum/copilot.lua"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/diffview.nvim",
@@ -317,6 +338,17 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd lualine.nvim ]]
+vim.cmd [[ packadd copilot.lua ]]
+
+-- Config for: copilot.lua
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fcopilot\frequire-\1\0\4\0\3\0\0066\0\0\0009\0\1\0003\2\2\0)\3d\0B\0\3\1K\0\1\0\0\rdefer_fn\bvim\0", "config", "copilot.lua")
+
+vim.cmd [[ packadd copilot-cmp ]]
+time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
 
 end)

@@ -1,4 +1,3 @@
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if status_ok then
@@ -18,55 +17,82 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     'additionalTextEdits',
   }
 }
+local lspconfig = require "lspconfig"
 
--- npm install -g typescript typescript-language-server
-require'lspconfig'.tsserver.setup({
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+local function eslint_config_exists()
+  local eslintrc = vim.fn.glob(".eslintrc*", 0, 1)
 
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-    buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
-
-    require("nvim-lsp-ts-utils").setup {
-        debug = false,
-        disable_commands = false,
-        enable_import_on_completion = true,
-        import_all_timeout = 5000, -- ms
-
-        -- eslint
-        eslint_enable_code_actions = false,
-        eslint_enable_disable_comments = false,
-        eslint_bin = 'eslint',
-        eslint_config_fallback = nil,
-        eslint_enable_diagnostics = false,
-        eslint_opts = {
-          diagnostics_format = "#{m} [#{c}]",
-          condition = function(utils)
-              return utils.root_has_file(".eslintrc")
-          end,
-        },
-
-        -- formatting
-        enable_formatting = false,
-        formatter = 'prettier_d_slim',
-        formatter_config_fallback = nil,
-
-        -- parentheses completion
-        complete_parens = false,
-        signature_help_in_parens = false,
-
-        -- update imports on file move
-        update_imports_on_move = true,
-        require_confirmation_on_move = true,
-        watch_dir = nil,
-
-        -- filter diagnostics
-        filter_out_diagnostics_by_severity = { "hint" },
-        filter_out_diagnostics_by_code = {},
-    }
-
-    require("nvim-lsp-ts-utils").setup_client(client)
+  if not vim.tbl_isempty(eslintrc) then
+    return true
   end
-})
+
+  if vim.fn.filereadable("package.json") then
+    if vim.fn.json_decode(vim.fn.readfile("package.json"))["eslintConfig"] then
+      return true
+    end
+  end
+
+  return false
+end
+
+local eslint = {
+  lintCommand = "eslint -f unix --stdin --stdin-filename ${INPUT}",
+  lintStdin = true,
+  lintFormats = { "%f:%l:%c: %m" },
+  lintIgnoreExitCode = true,
+  formatCommand = "eslint --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+  formatStdin = true
+}
+
+lspconfig.tsserver.setup {
+
+  capabilities = capabilities,
+  on_attach = function(client)
+    if client.config.flags then
+      client.config.flags.allow_incremental_sync = true
+    end
+    client.resolved_capabilities.document_formatting = false
+    set_lsp_config(client)
+    require("nvim-lsp-ts-utils").setup {
+      debug = false,
+      disable_commands = false,
+      enable_import_on_completion = true,
+      import_all_timeout = 5000, -- ms
+      -- update imports on file move
+      update_imports_on_move = true,
+      require_confirmation_on_move = true,
+      watch_dir = nil,
+
+      -- filter diagnostics
+      filter_out_diagnostics_by_severity = { "hint" },
+      filter_out_diagnostics_by_code = {},
+    }
+    require("nvim-lsp-ts-utils").setup_client(client)
+  end,
+  root_dir = function()
+    if not eslint_config_exists() then
+      return nil
+    end
+    return vim.fn.getcwd()
+  end,
+
+  settings = {
+    languages = {
+      javascript = { eslint },
+      javascriptreact = { eslint },
+      ["javascript.jsx"] = { eslint },
+      typescript = { eslint },
+      ["typescript.tsx"] = { eslint },
+      typescriptreact = { eslint }
+    }
+  },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact"
+  },
+
+}

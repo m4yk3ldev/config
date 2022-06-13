@@ -15,11 +15,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd([[packadd packer.nvim]])
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- Autocommand that reloads neovim whenever you save the plug.lua
 vim.cmd([[
 augroup packer_user_config
 autocmd!
-autocmd BufWritePost plug.lua source <afile> | PackerSync
+autocmd BufWritePost plug.lua source <afile> | PackerInstall
 augroup end
 ]])
 
@@ -50,6 +50,8 @@ return packer.startup(function(use)
   use("numToStr/Comment.nvim") -- Easily comment stuff
   use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   use "kyazdani42/nvim-web-devicons"
+  use("rcarriga/nvim-notify")
+  use("ahmedkhalf/project.nvim")
   use({ "akinsho/bufferline.nvim", tag = "*" })
   use("moll/vim-bbye")
   use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
@@ -76,6 +78,20 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip") -- snippet completions
   use("hrsh7th/cmp-nvim-lsp") -- Cargando tambien LSP
   use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Para el Tabnine
+  use({ "github/copilot.vim", run = ":Copilot setup" })
+  use({
+    "zbirenbaum/copilot-cmp", branch = "master",
+    after = { "copilot.lua", "nvim-cmp" },
+  })
+  use {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup()
+      end, 100)
+    end,
+  }
 
   -- snippets
   use("L3MON4D3/LuaSnip") --snippet engine
@@ -98,7 +114,13 @@ return packer.startup(function(use)
   use("nvim-treesitter/nvim-treesitter-refactor")
   use("theHamsta/nvim-treesitter-pairs")
   use({ "styled-components/vim-styled-components", branch = "main" }) -- Cargar los estilos del styled-components
-
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-gps").setup()
+    end
+  }
   -- Telescope
   use("nvim-telescope/telescope.nvim")
   use("simrat39/symbols-outline.nvim")
@@ -111,6 +133,7 @@ return packer.startup(function(use)
 
   -- Rest API
   use({ "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
