@@ -45,3 +45,4 @@ vim.opt.title = true -- Mostrar el nombre del fichero en el titulo
 
 vim.cmd("let python_highlight_all = 1")
 vim.cmd("let g:loaded_node_provider = 0")
+vim.notify("Configuraciones generales cargada")

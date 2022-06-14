@@ -1,28 +1,25 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-keymap("n", "<C-p>", "<cmd>Telescope find_files hidden=true<cr>", opts)
-keymap("n", "<C-l>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<C-b>", "<cmd>Telescope buffers<cr>", opts)
-keymap("n", "<leader>gt", "<cmd>Telescope git_status<CR>", opts)
-keymap("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts)
-keymap("n", "<C-h>", "<cmd>Telescope oldfiles<CR>", opts)
-
-require("telescope").setup({
-	defaults = {
-		file_ignore_patterns = {
-			"node_modules",
-			"_next",
-			".next",
-			".git",
-			".vscode",
-		},
-	},
-	extensions = {
-		media_files = {
-			filetypes = { "png", "webp", "jpg", "jpeg" },
-			find_cmd = "rg", -- find command (defaults to `fd`)
-		},
-	},
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+telescope.setup({
+  defaults = {
+    file_ignore_patterns = {
+      "node_modules",
+      "_next",
+      ".next",
+      ".git",
+      ".vscode",
+    },
+  },
+  extensions = {
+    media_files = {
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+      find_cmd = "rg", -- find command (defaults to `fd`)
+    },
+  },
 })
-require('telescope').load_extension('media_files')
--- require("telescope").load_extension("notify")
+telescope.load_extension("media_files")
+telescope.load_extension("projects")
+telescope.load_extension("notify")
+vim.notify("Load configuraciones Telescope")

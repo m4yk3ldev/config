@@ -67,11 +67,75 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Para dividar pantalla
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
-keymap("n", "<F2>", "<cmd>ToggleTerm<cr>", opts)
--- SymbolsOutline
-keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
 -- ForceWrite
 keymap("n", "<C-s>", "<cmd>w!<CR>", opts)
 
 -- ForceQuit
 keymap("n", "<C-q>", "<cmd>q!<CR>", opts)
+
+-- Telescope
+keymap("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", opts)
+keymap("n", "<leader>lp", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts)
+keymap("n", "<leader>h", "<cmd>Telescope oldfiles<CR>", opts)
+
+-- LSP
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "<f3>", ":Format<cr>", opts)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+keymap("n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
+keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+keymap("n", "<C-a>", "ggVG", opts)
+vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
+vim.cmd([[ command! FormatOnSave execute 'lua vim.lsp.buf.formatting_on_save()' ]])
+
+-- NvimTree mapping
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
+keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+
+-- Para automostra la documentacion
+vim.api.nvim_exec(
+	[[
+      augroup lsp_document_highlight
+        autocmd! * <buffer>
+        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]],
+	false
+)
+
+-- CheatSH Documentation
+keymap("n", "<leader>c", "<cmd>CheatSH<cr>", opts)
+
+-- RestNvim
+keymap("n", "<leader>r", "<Plug>RestNvim<cr>", opts)
+keymap("n", "<leader>rp", "<Plug>RestNvimPreview<cr>", opts)
+keymap("n", "<leader>rl", "<Plug>RestNvimLast<cr>", opts)
+
+-- SymbolsOutline
+keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
+
+-- ToggleTerm
+keymap("n", "<F2>", "<cmd>ToggleTerm<cr>", opts)
+
+-- Trouble
+vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
+
+vim.notify("Keymap cargada")

@@ -32,9 +32,9 @@ end
 -- Have packer use a popup window
 packer.init({
   display = {
-    open_fn = function()
-      return require("packer.util").float({ border = "rounded" })
-    end,
+    -- open_fn = function()
+    --   return require("packer.util").float({ border = "rounded" })
+    -- end,
   },
   max_jobs = 1,
 })
@@ -62,9 +62,6 @@ return packer.startup(function(use)
   })
   use("kyazdani42/nvim-tree.lua")
   use("norcalli/nvim-colorizer.lua")
-  use("folke/lsp-colors.nvim")
-  use("pangloss/vim-javascript")
-  use("maxmellon/vim-jsx-pretty")
   use({ "akinsho/toggleterm.nvim", branch = "main" })
   use("folke/trouble.nvim")
   use("rebelot/kanagawa.nvim")
@@ -103,7 +100,7 @@ return packer.startup(function(use)
   use("williamboman/nvim-lsp-installer") -- simple to use language server installer
   use("onsails/lspkind-nvim") -- Para los iconos
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-
+  use("folke/lsp-colors.nvim")
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",

@@ -27,10 +27,3 @@ rest.setup({
   custom_dynamic_variables = {},
   yank_dry_run = true,
 })
-
--- Keymap
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-keymap("n", "<leader>r", "<Plug>RestNvim<cr>", opts)
-keymap("n", "<leader>rp", "<Plug>RestNvimPreview<cr>", opts)
-keymap("n", "<leader>rl", "<Plug>RestNvimLast<cr>", opts)

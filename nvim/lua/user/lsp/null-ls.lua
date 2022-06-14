@@ -18,5 +18,7 @@ null_ls.setup({
     formatting.rufo,
     formatting.eslint,
     diagnostics.rubocop,
+    code_actions.eslint,
+    code_actions.gitsigns
   },
 })
