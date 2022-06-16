@@ -1,20 +1,3 @@
-local fn = vim.fn
-
--- Automatically install packer
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system({
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  })
-  print("Installing packer close and reopen Neovim...")
-  vim.cmd([[packadd packer.nvim]])
-end
-
 -- Autocommand that reloads neovim whenever you save the plug.lua
 vim.cmd([[
 augroup packer_user_config
@@ -26,15 +9,31 @@ augroup end
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
+  local fn = vim.fn
+
+  -- Automatically install packer
+  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+  if fn.empty(fn.glob(install_path)) > 0 then
+    PACKER_BOOTSTRAP = fn.system({
+      "git",
+      "clone",
+      "--depth",
+      "1",
+      "https://github.com/wbthomason/packer.nvim",
+      install_path,
+    })
+    print("Installing packer close and reopen Neovim...")
+    vim.cmd([[packadd packer.nvim]])
+  end
   return
 end
 
 -- Have packer use a popup window
 packer.init({
   display = {
-    -- open_fn = function()
-    --   return require("packer.util").float({ border = "rounded" })
-    -- end,
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+    end,
   },
   max_jobs = 1,
 })
@@ -46,7 +45,6 @@ return packer.startup(function(use)
   use("lewis6991/impatient.nvim")
   use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
   use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-  use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
   use("numToStr/Comment.nvim") -- Easily comment stuff
   use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   use "kyazdani42/nvim-web-devicons"
@@ -54,7 +52,6 @@ return packer.startup(function(use)
   use("ahmedkhalf/project.nvim")
   use({ "akinsho/bufferline.nvim", tag = "*" })
   use("moll/vim-bbye")
-  use("windwp/nvim-ts-autotag") -- Para Autocerrar los tag
 
   use({
     "nvim-lualine/lualine.nvim",
@@ -62,9 +59,12 @@ return packer.startup(function(use)
   })
   use("kyazdani42/nvim-tree.lua")
   use("norcalli/nvim-colorizer.lua")
+  use("folke/lsp-colors.nvim")
+  use("maxmellon/vim-jsx-pretty")
   use({ "akinsho/toggleterm.nvim", branch = "main" })
   use("folke/trouble.nvim")
   use("rebelot/kanagawa.nvim")
+  use("folke/tokyonight.nvim")
   use("vim-python/python-syntax")
 
   -- cmp plugins
@@ -100,7 +100,7 @@ return packer.startup(function(use)
   use("williamboman/nvim-lsp-installer") -- simple to use language server installer
   use("onsails/lspkind-nvim") -- Para los iconos
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-  use("folke/lsp-colors.nvim")
+
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -118,6 +118,17 @@ return packer.startup(function(use)
       require("nvim-gps").setup()
     end
   }
+  use({ "windwp/nvim-autopairs", require = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-autopairs").setup()
+    end
+  }) -- Autopairs, integrates with both cmp and treesitter
+  use({ "windwp/nvim-ts-autotag", require = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  }) -- Para Autocerrar los tag
+
   -- Telescope
   use("nvim-telescope/telescope.nvim")
   use("simrat39/symbols-outline.nvim")
