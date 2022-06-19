@@ -86,7 +86,6 @@ lsp_installer.on_server_ready(function(server)
       on_attach(client, bufnr)
     end
     opts.settings = require("user.lsp.servers.pyright").settings
-
   end
 
   -- This setup() function is exactly the same as lspuser.s setup function (:help lspuser.quickstart)

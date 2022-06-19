@@ -3,7 +3,6 @@
 -- Load servers (They will be automatically installed after next "Sync plugins" launch)
 -- Check installed servers by :LspInstallInfo
 
-require("user.lsp.servers.tsserver")
 require("user.lsp.servers.bash")
 require("user.lsp.servers.css")
 require("user.lsp.servers.graphql")

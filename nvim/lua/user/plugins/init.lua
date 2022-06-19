@@ -14,3 +14,4 @@ require("user.plugins.symbols_outline") -- Cargando Symbol Outline
 require("user.plugins.rest") -- Cargando RestNvim
 require("user.plugins.gps") -- Cargo GPS
 require("user.plugins.project") -- Cargando Project
+require("user.plugins.null-ls") -- Cargando null-ls
