@@ -182,6 +182,18 @@ _G.packer_plugins = {
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
   },
+  ["lsp_extensions.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/opt/lsp_extensions.nvim",
+    url = "https://github.com/nvim-lua/lsp_extensions.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/opt/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -218,6 +230,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/maykel/.local/share/nvim/site/pack/packer/start/nvim-gps",
     url = "https://github.com/SmiteshP/nvim-gps"
+  },
+  ["nvim-lightbulb"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/maykel/.local/share/nvim/site/pack/packer/opt/nvim-lightbulb",
+    url = "https://github.com/kosayoda/nvim-lightbulb"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -362,14 +380,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-gps]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rnvim-gps\frequire\0", "config", "nvim-gps")
 time([[Config for nvim-gps]], false)
--- Config for: nvim-ts-autotag
-time([[Config for nvim-ts-autotag]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
-time([[Config for nvim-ts-autotag]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-ts-autotag
+time([[Config for nvim-ts-autotag]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
+time([[Config for nvim-ts-autotag]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]

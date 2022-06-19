@@ -99,6 +99,12 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig") -- enable LSP
   use("williamboman/nvim-lsp-installer") -- simple to use language server installer
   use("onsails/lspkind-nvim") -- Para los iconos
+  use({ 'ray-x/lsp_signature.nvim', opt = true }) -- Para mostrar los parametros mientras se tipea
+  use({ 'kosayoda/nvim-lightbulb', opt = true, config = function()
+    require('nvim-lightbulb').setup({ autocmd = { enabled = true } })
+  end }) -- Para sacar el bombillo de Vscode
+  use({ 'nvim-lua/lsp_extensions.nvim', opt = true })
+  use 'arkav/lualine-lsp-progress'
 
   -- null-ls
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
