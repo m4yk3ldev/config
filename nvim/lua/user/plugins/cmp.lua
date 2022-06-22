@@ -23,7 +23,6 @@ local source_mapping = {
   nvim_lua = "[Lua]",
   cmp_tabnine = "[TN]",
   path = "[Path]",
-  copilot = "[COPILOT]"
 }
 cmp.setup({
   snippet = {
@@ -90,7 +89,6 @@ cmp.setup({
     end,
   },
   sources = {
-    { name = "copilot" },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },

@@ -60,12 +60,13 @@ return packer.startup(function(use)
   use("kyazdani42/nvim-tree.lua")
   use("norcalli/nvim-colorizer.lua")
   use("folke/lsp-colors.nvim")
-  use("maxmellon/vim-jsx-pretty")
+  -- use("maxmellon/vim-jsx-pretty")
   use({ "akinsho/toggleterm.nvim", branch = "main" })
   use("folke/trouble.nvim")
   use("rebelot/kanagawa.nvim")
   use("folke/tokyonight.nvim")
   use("vim-python/python-syntax")
+  use("ellisonleao/gruvbox.nvim")
 
   -- cmp plugins
   use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -75,20 +76,6 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip") -- snippet completions
   use("hrsh7th/cmp-nvim-lsp") -- Cargando tambien LSP
   use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Para el Tabnine
-  use({ "github/copilot.vim", run = ":Copilot setup" })
-  use({
-    "zbirenbaum/copilot-cmp", branch = "master",
-    after = { "copilot.lua", "nvim-cmp" },
-  })
-  use {
-    "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup()
-      end, 100)
-    end,
-  }
 
   -- snippets
   use("L3MON4D3/LuaSnip") --snippet engine
