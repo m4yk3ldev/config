@@ -17,6 +17,9 @@ null_ls.setup({
   sources = {
     formatting.rufo,
     formatting.eslint,
+    formatting.autopep8,
+    formatting.djhtml,
+    formatting.djlint,
     diagnostics.rubocop,
     code_actions.eslint,
     code_actions.gitsigns
