@@ -136,6 +136,9 @@ return packer.startup(function(use)
   -- Rest API
   use("NTBBloodbath/rest.nvim")
 
+  -- Para syntax files HTTP files
+  use("nicwest/vim-http")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
