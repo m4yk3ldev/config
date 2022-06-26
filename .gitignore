@@ -3,3 +3,4 @@ nvim/autoload
 nvim/pack
 .DS_Store
 .netrwhist
+nvim/plugin/packer_compiled.lua
