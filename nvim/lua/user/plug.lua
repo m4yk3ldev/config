@@ -122,7 +122,13 @@ return packer.startup(function(use)
       require("nvim-ts-autotag").setup()
     end
   }) -- Para Autocerrar los tag
-
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-treesitter/nvim-treesitter" }
+    }
+  }
   -- Telescope
   use("nvim-telescope/telescope.nvim")
   use("simrat39/symbols-outline.nvim")

@@ -22,8 +22,11 @@ null_ls.setup({
     formatting.djlint,
     diagnostics.rubocop,
     diagnostics.tsc,
+    diagnostics.standardjs,
     code_actions.eslint,
     code_actions.gitsigns,
-    code_actions.xo
+    code_actions.xo,
+    code_actions.refactoring,
+    completion.vsnip
   },
 })
