@@ -136,7 +136,12 @@ return packer.startup(function(use)
   use("nvim-telescope/telescope-media-files.nvim")
 
   -- git
-  use("lewis6991/gitsigns.nvim")
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
   use("sindrets/diffview.nvim")
 
   -- Rest API
