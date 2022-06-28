@@ -49,6 +49,9 @@ return packer.startup(function(use)
   use("antoinemadec/FixCursorHold.nvim") -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   use "kyazdani42/nvim-web-devicons"
   use("rcarriga/nvim-notify")
+  use { "j-hui/fidget.nvim", config = function()
+    require "fidget".setup {}
+  end }
   use("ahmedkhalf/project.nvim")
   use({ "akinsho/bufferline.nvim", tag = "*" })
   use("moll/vim-bbye")
@@ -89,8 +92,6 @@ return packer.startup(function(use)
   use({ 'kosayoda/nvim-lightbulb', opt = true, config = function()
     require('nvim-lightbulb').setup({ autocmd = { enabled = true } })
   end }) -- Para sacar el bombillo de Vscode
-  use({ 'nvim-lua/lsp_extensions.nvim', opt = true })
-  use 'arkav/lualine-lsp-progress'
 
   -- null-ls
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters

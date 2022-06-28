@@ -9,7 +9,7 @@ end
 
 local diagnostics = {
   "diagnostics",
-  sources = { "nvim_diagnostic" },
+  sources = { "nvim_diagnostic", "coc" },
   symbols = { error = " ", warn = " ", info = " ", hint = " " },
   colored = true,
   update_in_insert = true,
@@ -86,14 +86,14 @@ end
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme= "gruvbox",
+    theme = "tokyonight",
     disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
     always_divide_middle = true,
   },
   sections = {
     lualine_a = { "mode" },
     lualine_b = { branch, diagnostics, diff },
-    lualine_c = { gps, 'lsp_progress' },
+    lualine_c = { gps },
     lualine_x = { load_lsp, spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { progress },
