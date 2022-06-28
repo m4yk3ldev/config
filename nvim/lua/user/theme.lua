@@ -10,7 +10,7 @@ vim.g.tokyonight_terminal_colors = true
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 vim.g.tokyonight_lualine_bold = true
-vim.g.tokyonight_transparent_sidebar = true
+-- vim.g.tokyonight_transparent_sidebar = true
 -- -- Load the colorscheme
 vim.cmd([[colorscheme tokyonight]])
 -- --
