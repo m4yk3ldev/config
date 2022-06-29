@@ -2,7 +2,7 @@
 vim.cmd([[
 augroup packer_user_config
 autocmd!
-autocmd BufWritePost plug.lua source <afile> | PackerSync
+autocmd BufWritePost plug.lua source <afile> | PackerUpdate
 augroup end
 ]])
 
@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use("ahmedkhalf/project.nvim")
   use({ "akinsho/bufferline.nvim", tag = "*" })
   use("moll/vim-bbye")
+  use("neoclide/vim-jsx-improve")
 
   use({
     "nvim-lualine/lualine.nvim",
@@ -78,6 +79,7 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip") -- snippet completions
   use("hrsh7th/cmp-nvim-lsp") -- Cargando tambien LSP
   use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Para el Tabnine
+  use("hrsh7th/cmp-nvim-lsp-signature-help")
 
   -- snippets
   use("L3MON4D3/LuaSnip") --snippet engine
@@ -88,7 +90,6 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig") -- enable LSP
   use("williamboman/nvim-lsp-installer") -- simple to use language server installer
   use("onsails/lspkind-nvim") -- Para los iconos
-  use({ 'ray-x/lsp_signature.nvim', opt = true }) -- Para mostrar los parametros mientras se tipea
   use({ 'kosayoda/nvim-lightbulb', opt = true, config = function()
     require('nvim-lightbulb').setup({ autocmd = { enabled = true } })
   end }) -- Para sacar el bombillo de Vscode
