@@ -21,7 +21,6 @@ null_ls.setup({
     formatting.djhtml,
     formatting.djlint,
     diagnostics.rubocop,
-    diagnostics.standardjs,
     code_actions.eslint,
     code_actions.gitsigns,
     code_actions.refactoring,

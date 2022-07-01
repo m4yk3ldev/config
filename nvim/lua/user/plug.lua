@@ -55,8 +55,6 @@ return packer.startup(function(use)
   use("ahmedkhalf/project.nvim")
   use({ "akinsho/bufferline.nvim", tag = "*" })
   use("moll/vim-bbye")
-  use("neoclide/vim-jsx-improve")
-
   use({
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
@@ -131,6 +129,8 @@ return packer.startup(function(use)
       { "nvim-treesitter/nvim-treesitter" }
     }
   }
+  use("neoclide/vim-jsx-improve")
+  use("pangloss/vim-javascript")
   -- Telescope
   use("nvim-telescope/telescope.nvim")
   use("simrat39/symbols-outline.nvim")

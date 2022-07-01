@@ -94,7 +94,7 @@ lualine.setup({
     lualine_a = { "mode" },
     lualine_b = { branch, diagnostics, diff },
     lualine_c = { gps },
-    lualine_x = { load_lsp, spaces, "encoding", filetype },
+    lualine_x = { load_lsp ,spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { progress },
   },
