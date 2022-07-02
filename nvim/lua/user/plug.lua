@@ -84,13 +84,6 @@ return packer.startup(function(use)
   use("nvim-treesitter/nvim-treesitter-refactor")
   use("theHamsta/nvim-treesitter-pairs")
   use({ "styled-components/vim-styled-components", branch = "main" }) -- Cargar los estilos del styled-components
-  use {
-    "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-gps").setup()
-    end
-  }
   use({ "windwp/nvim-autopairs", require = "nvim-treesitter/nvim-treesitter",
     config = function()
       require("nvim-autopairs").setup()
@@ -115,15 +108,6 @@ return packer.startup(function(use)
   use("nvim-telescope/telescope.nvim")
   use("edluffy/hologram.nvim")
   use("nvim-telescope/telescope-media-files.nvim")
-
-  -- git
-  use {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
-  use("sindrets/diffview.nvim")
 
   -- Rest API
   use("NTBBloodbath/rest.nvim")
