@@ -137,9 +137,6 @@ keymap("n", "<leader>r", "<Plug>RestNvim<cr>", opts)
 keymap("n", "<leader>rp", "<Plug>RestNvimPreview<cr>", opts)
 keymap("n", "<leader>rl", "<Plug>RestNvimLast<cr>", opts)
 
--- SymbolsOutline
-keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
-
 -- ToggleTerm
 keymap("n", "<F2>", "<cmd>ToggleTerm<cr>", opts)
 

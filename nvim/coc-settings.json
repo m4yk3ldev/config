@@ -56,5 +56,31 @@
     "typeParameter": "\uf278",
     "default": "\uf29c"
   },
-  "sumneko-lua.enableNvimLuaDev": true
+  "languageserver": {
+    "lua": {
+      "command": "/home/maykel/.config/coc/extensions/coc-sumneko-lua-data/sumneko-lua-ls/extension/server/bin/lua-language-server",
+      "args": [
+        "-E",
+        "/home/maykel/.config/coc/extensions/coc-sumneko-lua-data/sumneko-lua-ls/extension/server/bin/main.lua"
+      ],
+      "filetypes": ["lua"],
+      "settings": {
+        "Lua": {
+          "workspace.library": {
+            "/usr/share/nvim/runtime/lua": true,
+            "/usr/share/nvim/runtime/lua/vim": true,
+            "/usr/share/nvim/runtime/lua/vim/lsp": true
+          },
+          "diagnostics": {
+            "globals": ["vim"]
+          }
+        }
+      }
+    }
+  },
+  "Lua.diagnostics.globals": ["vim"],
+  "sumneko-lua.enableNvimLuaDev": true,
+  "cSpellExt.enableDictionaries": ["portuguese-brazilian", "spanish"],
+  "cSpell.language": "en,pt,pt_BR,es",
+  "cSpell.userWords": ["Instalaciones", "htmldjango"]
 }

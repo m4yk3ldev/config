@@ -32,7 +32,6 @@ vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would sh
 vim.opt.wrap = false -- display lines as one long line
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
-
 vim.opt.shortmess:append("c")
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
@@ -45,4 +44,3 @@ vim.opt.title = true -- Mostrar el nombre del fichero en el titulo
 
 vim.cmd("let python_highlight_all = 1")
 vim.cmd("let g:loaded_node_provider = 0")
-vim.notify("Configuraciones generales cargada")
