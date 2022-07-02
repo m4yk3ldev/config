@@ -54,26 +54,6 @@ local spaces = function()
   return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-local load_lsp = {
-  -- Lsp server name .
-  function()
-    local msg = "No LSP"
-    local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
-      end
-    end
-    return msg
-  end,
-  icon = " LSP:",
-  color = { fg = "#ffffff", gui = "bold" },
-}
 local gps = { function()
   if vim.o.columns < 140 or not package.loaded["nvim-gps"] then
     return ""
@@ -94,7 +74,7 @@ lualine.setup({
     lualine_a = { "mode" },
     lualine_b = { branch, diagnostics, diff },
     lualine_c = { gps },
-    lualine_x = { load_lsp ,spaces, "encoding", filetype },
+    lualine_x = {'g:coc_status' , spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { progress },
   },
