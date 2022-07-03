@@ -12,7 +12,8 @@
     "typescript",
     "typescriptreact",
     "lua",
-    "vim"
+    "vim",
+    "python"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -37,5 +38,7 @@
   "cSpellExt.enableDictionaries": ["portuguese-brazilian", "spanish"],
   "cSpell.language": "en,pt,pt_BR,es",
   "diagnostic.infoSign": " ",
-  "diagnostic.errorSign": " "
+  "diagnostic.errorSign": " ",
+  "diagnostic.hintSign": " ",
+  "cSpell.userWords": ["arange", "pylint", "Nvim", "sumneko", "htmldjango"]
 }
