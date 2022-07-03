@@ -23,7 +23,8 @@ vim.g.coc_global_extensions = {
   'coc-yank',
   'coc-spell-checker',
   'coc-cspell-dicts',
-  "coc-symbol-line"
+  "coc-symbol-line",
+  "coc-docker"
 }
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
 vim.cmd('let g:javascript_plugin_flow = 1')
