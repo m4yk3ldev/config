@@ -36,5 +36,6 @@
   "sumneko-lua.enableNvimLuaDev": true,
   "cSpellExt.enableDictionaries": ["portuguese-brazilian", "spanish"],
   "cSpell.language": "en,pt,pt_BR,es",
-  "cSpell.userWords": ["Instalaciones", "htmldjango"]
+  "diagnostic.infoSign": " ",
+  "diagnostic.errorSign": " "
 }
