@@ -40,5 +40,12 @@
   "diagnostic.infoSign": " ",
   "diagnostic.errorSign": " ",
   "diagnostic.hintSign": " ",
-  "cSpell.userWords": ["arange", "pylint", "Nvim", "sumneko", "htmldjango"]
+  "cSpell.userWords": [
+    "Nvim",
+    "Secundary",
+    "arange",
+    "htmldjango",
+    "pylint",
+    "sumneko"
+  ]
 }
