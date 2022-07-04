@@ -15,22 +15,6 @@
 -- vim.cmd([[colorscheme tokyonight]])
 -- --
 vim.opt.termguicolors = true
---
--- -- -- Default options:
--- -- require("kanagawa").setup({
--- --   undercurl = true, -- enable undercurls
--- --   specialReturn = true, -- special highlight for the return keyword
--- --   specialException = true, -- special highlight for exception handling keywords
--- --   transparent = false, -- do not set background color
--- --   dimInactive = false, -- dim inactive window `:h hl-NormalNC`
--- --   italic = true,
--- --   colors = {},
--- --   overrides = {},
--- -- })
--- --
--- -- -- setup must be called before loading
--- -- vim.cmd("colorscheme kanagawa")
---
 -- Para Sonokai
 vim.g.sonokai_style = 'andromeda'
 vim.g.sonokai_better_performance = 1
