@@ -2,7 +2,7 @@
 vim.cmd([[
 augroup packer_user_config
 autocmd!
-autocmd BufWritePost plug.lua source <afile> | PackerUpdate
+autocmd BufWritePost plug.lua source <afile> | PackerInstall
 augroup end
 ]])
 
@@ -68,10 +68,12 @@ return packer.startup(function(use)
   use("ellisonleao/gruvbox.nvim")
 
   -- snippets
-  use("L3MON4D3/LuaSnip") --snippet engine
-  use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-  use("stevearc/vim-vscode-snippets") -- Usar los snippets del Vscode
+  use({ "L3MON4D3/LuaSnip" }) --snippet engine
+  use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
+  use({ "stevearc/vim-vscode-snippets" }) -- Usar los snippets del Vscode
+
   use { "Djancyp/cheat-sheet" } -- Cargar documentacion de cada lenguaje
+
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -102,6 +104,7 @@ return packer.startup(function(use)
   use("neoclide/vim-jsx-improve")
   use("pangloss/vim-javascript")
   use("yuezk/vim-js")
+
   -- Telescope
   use("nvim-telescope/telescope.nvim")
   use("edluffy/hologram.nvim")

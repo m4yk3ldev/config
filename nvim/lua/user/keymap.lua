@@ -108,10 +108,6 @@ keymap("n", "K", ":call CocActionAsync('doHover')<CR>", opts)
 keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
 keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", { noremap = true })
 keymap("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
-keymap("i", "<TAB>", "pumvisible() ? '<C-n>' : '<TAB>'", opts)
-keymap("i", "<S-TAB>", "pumvisible() ? '<C-p>' : '<C-h>'", { noremap = true, expr = true })
-keymap("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'",
-  { silent = true, expr = true, noremap = true })
 
 -- NvimTree mapping
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)

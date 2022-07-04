@@ -12,7 +12,7 @@ vim.g.coc_global_extensions = {
   'coc-marketplace',
   'coc-git',
   'coc-htmldjango',
-  'coc-ultisnips',
+  'coc-snippets',
   'coc-scssmodules',
   'coc-xml',
   'coc-styled-components',
@@ -28,3 +28,4 @@ vim.g.coc_global_extensions = {
 }
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
 vim.cmd('let g:javascript_plugin_flow = 1')
+vim.cmd("autocmd CursorHold * silent call CocActionAsync('highlight')")
