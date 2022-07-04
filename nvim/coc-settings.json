@@ -37,6 +37,7 @@
   "cSpellExt.enableDictionaries": ["portuguese-brazilian", "spanish"],
   "cSpell.language": "en,pt,pt_BR,es",
   "diagnostic.infoSign": " ",
+  "diagnostic.warningSign": " ",
   "diagnostic.errorSign": " ",
   "diagnostic.hintSign": " ",
   "tabnine.shortcut": "TabNine",
@@ -56,6 +57,7 @@
     "Nvim",
     "Secundary",
     "arange",
+    "busqueda",
     "htmldjango",
     "pylint",
     "sumneko"
