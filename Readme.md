@@ -25,7 +25,7 @@
 
 Para usar el script se debe instalar el `install.sh`
 
-Para Cargar las configuraciones del i3wm usar `install-gui.sh`
+Para cargar las configuraciones del i3wm usar `install-gui.sh`
 
 # Combinaciones de teclas
 
