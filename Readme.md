@@ -49,10 +49,10 @@ Para cargar las configuraciones del i3wm usar `install-gui.sh`
 ## Coc
 
 - `Space+ca` Ejecutar los Code Action
-- `gd` Buscar la definicion
+- `gd` Buscar la definición
 - `gr` Buscar las referencias
 - `gi` Buscar las implementaciones
-- `K` Mostar informacion de las variables o función
+- `K` Mostrar información de las variables o función
 - `Space+rn` Cambiar el nombre de una función o variables
 - `Ctrl+Space` Buscar las autocompletados
 - `F3` Para formatting on save
@@ -63,7 +63,7 @@ Para cargar las configuraciones del i3wm usar `install-gui.sh`
 
 ## CheatSH
 
-- `Space+c` Para cargar las documentacion de cada funcion
+- `Space+c` Para cargar las documentación de cada función
 
 ## RestNvim
 

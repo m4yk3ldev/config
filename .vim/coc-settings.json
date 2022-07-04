@@ -12,6 +12,8 @@
     "struct",
     "sumneko",
     "tabnine",
-    "ultisnips"
+    "ultisnips",
+    "volumeicon",
+    "wezterm"
   ]
 }
