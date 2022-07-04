@@ -72,6 +72,12 @@ keymap("n", "<C-s>", "<cmd>w!<CR>", opts)
 
 -- ForceQuit
 keymap("n", "<C-q>", "<cmd>q!<CR>", opts)
+-- Turn off search highlighting
+keymap('n', '<Esc>', ':noh<CR>', opts)
+-- Get out of the Terminal
+keymap('t', '<Esc>', '<C-\\><C-n>', opts)
+-- Duplicate Line
+keymap('n', 'tt', ':t.<CR>', opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", opts)
@@ -108,6 +114,7 @@ keymap("n", "K", ":call CocActionAsync('doHover')<CR>", opts)
 keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
 keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", { noremap = true })
 keymap("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
+keymap('n', '<F3>', ':call CocAction("format")<CR>', opts)
 
 -- NvimTree mapping
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
