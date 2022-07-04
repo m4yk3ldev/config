@@ -65,14 +65,13 @@ return packer.startup(function(use)
   use("folke/trouble.nvim")
   use("rebelot/kanagawa.nvim")
   use("folke/tokyonight.nvim")
-  use("vim-python/python-syntax")
   use("ellisonleao/gruvbox.nvim")
 
   -- snippets
   use("L3MON4D3/LuaSnip") --snippet engine
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
   use("stevearc/vim-vscode-snippets") -- Usar los snippets del Vscode
-  use { "Djancyp/cheat-sheet" }
+  use { "Djancyp/cheat-sheet" } -- Cargar documentacion de cada lenguaje
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -107,6 +106,8 @@ return packer.startup(function(use)
   use("nvim-telescope/telescope.nvim")
   use("edluffy/hologram.nvim")
   use("nvim-telescope/telescope-media-files.nvim")
+  use("vim-python/python-syntax")
+  use("maxmellon/vim-jsx-pretty")
 
   -- Rest API
   use("NTBBloodbath/rest.nvim")
