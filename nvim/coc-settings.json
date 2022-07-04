@@ -5,7 +5,6 @@
   "eslint.autoFixOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "markdown",
     "javascript",
     "json",
     "javascriptreact",
@@ -53,21 +52,12 @@
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "black",
   "python.linting.mypyEnabled": true,
-  "cSpell.userWords": [
-    "Nvim",
-    "Secundary",
-    "arange",
-    "busqueda",
-    "htmldjango",
-    "pylint",
-    "sumneko"
-  ],
   "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",
     "variable": "[]",
     "field": "  ",
-    "typeParameter": "<>",
+    "typeParameter": "<> ",
     "constant": "  ",
     "class": "  ",
     "interface": " 蘒",
@@ -90,7 +80,6 @@
     "enumMember": "  ",
     "default": "  "
   },
-
   "suggest.highPrioritySourceLimit": 10,
   "suggest.languageSourcePriority": 95,
   "suggest.lowPrioritySourceLimit": 90,
@@ -103,9 +92,10 @@
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "suggest.defaultSortMethod": "alphabetical",
   "suggest.triggerAfterInsertEnter": false,
-  "suggest.detailField": "menu",
+  "suggest.detailField": "abbr",
   "suggest.keepCompleteopt": false,
   "suggest.noselect": false,
+  "suggest.enablePreview": true,
   "coc.source.file.priority": 60,
   "coc.source.buffer.priority": 50,
   "coc.preferences.formatOnType": true,

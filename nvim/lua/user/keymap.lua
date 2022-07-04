@@ -108,18 +108,17 @@ keymap("n", "<leader>h", "<cmd>Telescope oldfiles<CR>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 -- COC
 keymap("n", "<leader>ca", "<Plug>(coc-codeaction)", opts)
-keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
-keymap("n", "gd", "<Plug>(coc-definition)", { silent = true })
+keymap("n", "gd", "<Plug>(coc-definition)", opts)
+keymap("n", "gr", "<Plug>(coc-references)", opts)
+keymap("n", "gi", "<Plug>(coc-implementation)", opts)
 keymap("n", "K", ":call CocActionAsync('doHover')<CR>", opts)
 keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
-keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", { noremap = true })
 keymap("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
 keymap('n', '<F3>', ':call CocAction("format")<CR>', opts)
 
 -- NvimTree mapping
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 
 -- Para automostra la documentacion
 vim.api.nvim_exec(
@@ -145,11 +144,11 @@ keymap("n", "<leader>rl", "<Plug>RestNvimLast<cr>", opts)
 keymap("n", "<F2>", "<cmd>ToggleTerm<cr>", opts)
 
 -- Trouble
-vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
+keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
 
 vim.notify("Keymap cargada")
