@@ -89,6 +89,7 @@ keymap("n", "<leader>h", "<cmd>Telescope oldfiles<CR>", opts)
 
 -- Para sellecionar todo
 keymap("n", "<C-a>", "ggVG", opts)
+
 -- COC
 keymap("n", "<leader>ca", "<Plug>(coc-codeaction)", opts)
 keymap("n", "gd", "<Plug>(coc-definition)", opts)
@@ -106,13 +107,13 @@ keymap("n", "]c", "<Plug>(coc-git-nextconflict)", opts)
 keymap("n", "[g", "<Plug>(coc-git-prevchunk)", opts)
 keymap("n", "]g", "<Plug>(coc-git-nextchunk)", opts)
 -- show chunk diff at current position
-keymap("n", "gs", "<Plug>(coc-git-chunkinfo)", {})
+keymap("n", "gs", "<Plug>(coc-git-chunkinfo)", opts)
 
 -- NvimTree mapping
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
 
--- Para automostra la documentacion
+-- Para automostra la documentacion
 vim.api.nvim_exec(
   [[
       augroup lsp_document_highlight
@@ -141,6 +142,5 @@ keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = t
 keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
 keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
 keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
-keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
 
 vim.notify("Keymap cargada")
