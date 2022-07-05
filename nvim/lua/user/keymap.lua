@@ -144,5 +144,3 @@ keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = t
 keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
 keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
 keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
-
-vim.notify("Keymap cargada")

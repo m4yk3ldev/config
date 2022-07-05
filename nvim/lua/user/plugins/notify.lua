@@ -13,5 +13,4 @@ if status_ok then
     },
   })
   vim.notify = notify
-  vim.notify(...)
 end

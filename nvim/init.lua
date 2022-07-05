@@ -8,3 +8,4 @@ require("user.plugins") -- Cargando los theme
 require("user.keymap") -- Cargando keyboard principales
 require("user.theme") -- Cargando los theme
 require("user.autocmd") -- Para cargar los plugins
+vim.notify("Cargado correctamente")
