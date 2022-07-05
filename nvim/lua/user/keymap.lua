@@ -92,6 +92,8 @@ keymap("n", "<C-a>", "ggVG", opts)
 
 -- COC
 keymap("n", "<leader>ca", "<Plug>(coc-codeaction)", opts)
+keymap("x", "<leader>ca", "<Plug>(coc-codeaction-selected)", opts)
+
 keymap("n", "gd", "<Plug>(coc-definition)", opts)
 keymap("n", "gr", "<Plug>(coc-references)", opts)
 keymap("n", "gi", "<Plug>(coc-implementation)", opts)

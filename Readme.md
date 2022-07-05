@@ -56,6 +56,12 @@ Para cargar las configuraciones del i3wm usar `install-gui.sh`
 - `Space+rn` Cambiar el nombre de una función o variables
 - `Ctrl+Space` Buscar las autocompletados
 - `F3` Para formatting on save
+- `gc` Para mostrar los commits del ficheros
+- `[c` Para ir al anterior conflicto 
+- `]c` Para ir conflicto después
+- `[g` Para ir al cambio del buffer anterior
+- `]g` Para ir al cambio después del buffer
+
 
 ## NvimTree
 
