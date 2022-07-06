@@ -43,3 +43,14 @@ vim.opt.title = true -- Mostrar el nombre del fichero en el titulo
 
 vim.cmd("let python_highlight_all = 1")
 vim.cmd("let g:loaded_node_provider = 0")
+
+function _G.reload_nvim_conf()
+  for name,_ in pairs(package.loaded) do
+    if name:match('^core') or name:match('^lsp') or name:match('^plugins') then
+      package.loaded[name] = nil
+    end
+  end
+
+  dofile(vim.env.MYVIMRC)
+  vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
+end

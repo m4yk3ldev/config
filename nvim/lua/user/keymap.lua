@@ -79,6 +79,9 @@ keymap('t', '<Esc>', '<C-\\><C-n>', opts)
 -- Duplicate Line
 keymap('n', 'tt', ':t.<CR>', opts)
 
+-- Recargar las configuraciones
+keymap('n', '<C-r>','<cmd>lua reload_nvim_conf()<CR><cmd>CocRestart<cr>',opts)
+
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>lp", "<cmd>Telescope live_grep<cr>", opts)

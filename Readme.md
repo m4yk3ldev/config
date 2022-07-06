@@ -36,6 +36,7 @@ Para cargar las configuraciones del i3wm usar `install-gui.sh`
 - `Ctrl+q` Cerrar forzoso
 - `tt` Duplicar linea
 - `Ctrl+a` Seleccionar todo el texto del fichero
+- `Ctrl+r` Recargar todas las configuraciones
 
 ## Telescope
 
