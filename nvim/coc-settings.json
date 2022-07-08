@@ -20,8 +20,6 @@
   "git.removedSign.text": "﫧",
   "git.topRemovedSign.text": "﫧",
   "git.changeRemovedSign.text": "▎",
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
   "codeLens.enable": true,
   "importCost.typescriptExtensions": ["\\.tsx?$"],
   "importCost.javascriptExtensions": ["\\.jsx?$"],
@@ -51,7 +49,14 @@
   "python.analysis.typeCheckingMode": "basic",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "black",
-  "python.linting.mypyEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+    "--disable=C0111",
+    "--load-plugins",
+    "pylint_django"
+  ],
+  "python.jediEnabled": true,
   "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",

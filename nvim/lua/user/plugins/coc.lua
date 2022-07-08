@@ -7,7 +7,8 @@ vim.g.coc_global_extensions = {
   'coc-tabnine',
   'coc-prettier',
   'coc-eslint',
-  'coc-pyright',
+  "coc-jedi",
+  "coc-pyright",
   'coc-pairs',
   'coc-marketplace',
   'coc-git',
@@ -25,7 +26,11 @@ vim.g.coc_global_extensions = {
   'coc-cspell-dicts',
   "coc-symbol-line",
   "coc-docker",
-  "coc-react-refactor"
+  "coc-react-refactor",
+  "coc-rls",
+  "coc-gitmoji",
+  "coc-yaml",
+  "coc-gitignore",
 }
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
 vim.cmd('let g:javascript_plugin_flow = 1')
