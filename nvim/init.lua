@@ -7,5 +7,6 @@ require("user.plug") -- Cargando los plugins
 require("user.plugins") -- Cargando los theme
 require("user.keymap") -- Cargando keyboard principales
 require("user.theme") -- Cargando los theme
+-- require("user.theme_2") -- cargando configuracion de prueba
 require("user.autocmd") -- Para cargar los plugins
 vim.notify("Cargado correctamente")
