@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Installing all depeneded packages"
+
+sudo pacman -S i3 zsh git kitty i3-status-rust rofi volumeicon wezterm
+
 echo "Agregando configuraciones de i3"
 mkdir -p $HOME/.i3
 ln -sfv $PWD/.i3/config $HOME/.i3/config
@@ -26,3 +30,7 @@ ln -sfv $PWD/rofi/config.rasi $HOME/.config/rofi/config.rasi
 echo "Agregando configuraciones de VolumeIco"
 mkdir -p $HOME/.config/volumeicon
 ln -sfv $PWD/volumeicon/volumeicon $HOME/.config/volumeicon/volumeicon
+
+echo "Agregando configuraciones de WezTerm"
+mkdir -p $HOME/.config/wezterm/
+ln -sfv $PWD/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
