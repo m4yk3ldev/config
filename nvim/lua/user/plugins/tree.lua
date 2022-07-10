@@ -67,6 +67,7 @@ nvim_tree.setup({
     },
     number = false,
     relativenumber = false,
+    signcolumn = "no",
   },
   trash = {
     cmd = "trash",
