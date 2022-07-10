@@ -80,7 +80,7 @@ keymap('t', '<Esc>', '<C-\\><C-n>', opts)
 keymap('n', 'tt', ':t.<CR>', opts)
 
 -- Recargar las configuraciones
-keymap('n', '<C-r>','<cmd>lua reload_nvim_conf()<CR><cmd>CocRestart<cr>',opts)
+keymap('n', '<C-r>', '<cmd>lua reload_nvim_conf()<CR><cmd>CocRestart<cr>', opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", opts)
@@ -89,6 +89,8 @@ keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
 keymap("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts)
 keymap("n", "<leader>h", "<cmd>Telescope oldfiles<CR>", opts)
+keymap("n", "<leader>e", "<cmd>Telescope symbols<cr>"
+  , opts)
 
 -- Para sellecionar todo
 keymap("n", "<C-a>", "ggVG", opts)

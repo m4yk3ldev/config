@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use("folke/trouble.nvim")
   use("folke/tokyonight.nvim")
   use("sainnhe/sonokai")
-
+  use { "ellisonleao/gruvbox.nvim" }
 
   -- snippets
   use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -111,6 +111,7 @@ return packer.startup(function(use)
   use("nvim-telescope/telescope-media-files.nvim")
   use("vim-python/python-syntax")
   use("maxmellon/vim-jsx-pretty")
+  use("nvim-telescope/telescope-symbols.nvim")
 
   -- Rest API
   use("NTBBloodbath/rest.nvim")

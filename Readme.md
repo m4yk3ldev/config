@@ -46,6 +46,7 @@ Para cargar las configuraciones del i3wm usar `install-gui.sh`
 - `Space+h` Buscar por ficheros modificados recientemente
 - `Space+gs` Buscar por git status
 - `Space+gc` Buscar los commits
+- `Space+e` Buscar Emoji
 
 ## Coc
 

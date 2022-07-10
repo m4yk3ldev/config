@@ -19,6 +19,7 @@ telescope.setup({
     },
   },
 })
+
 telescope.load_extension("media_files")
 telescope.load_extension("projects")
 telescope.load_extension("notify")
