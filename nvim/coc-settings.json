@@ -105,5 +105,8 @@
   "coc.source.file.priority": 60,
   "coc.source.buffer.priority": 50,
   "coc.preferences.formatOnType": true,
-  "snippets.ultisnips.enable": false
+  "snippets.ultisnips.enable": false,
+  "cSpell.userWords": [
+    "fortawesome"
+  ]
 }

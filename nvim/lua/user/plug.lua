@@ -66,6 +66,7 @@ return packer.startup(function(use)
   use("folke/tokyonight.nvim")
   use("sainnhe/sonokai")
   use { "ellisonleao/gruvbox.nvim" }
+  use { "rebelot/kanagawa.nvim" }
 
   -- snippets
   use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -121,6 +122,8 @@ return packer.startup(function(use)
 
   -- COC
   use { 'neoclide/coc.nvim', branch = 'release' }
+  -- Install copilot plugin
+  use { 'github/copilot.vim' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
