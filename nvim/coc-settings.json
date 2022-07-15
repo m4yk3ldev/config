@@ -107,6 +107,7 @@
   "coc.preferences.formatOnType": true,
   "snippets.ultisnips.enable": false,
   "cSpell.userWords": [
+    "REINTENTAR",
     "fortawesome"
   ]
 }
