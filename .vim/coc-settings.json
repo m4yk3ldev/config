@@ -15,6 +15,9 @@
     "ufacd",
     "ultisnips",
     "volumeicon",
-    "wezterm"
+    "wezterm",
+    "autopep8",
+    "autopep"
   ]
 }
+
