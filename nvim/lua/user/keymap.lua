@@ -120,18 +120,6 @@ keymap("n", "gs", "<Plug>(coc-git-chunkinfo)", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
 
--- Para automostra la documentacion
-vim.api.nvim_exec(
-  [[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]],
-  false
-)
-
 -- CheatSH Documentation
 keymap("n", "<leader>c", "<cmd>CheatSH<cr>", opts)
 

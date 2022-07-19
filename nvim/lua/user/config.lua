@@ -45,8 +45,8 @@ vim.cmd("let python_highlight_all = 1")
 vim.cmd("let g:loaded_node_provider = 0")
 
 function _G.reload_nvim_conf()
-  for name,_ in pairs(package.loaded) do
-    if name:match('^core') or name:match('^lsp') or name:match('^plugins') then
+  for name, _ in pairs(package.loaded) do
+    if name:match('^lsp') then
       package.loaded[name] = nil
     end
   end
