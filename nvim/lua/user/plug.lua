@@ -125,6 +125,12 @@ return packer.startup(function(use)
   -- Install copilot plugin
   use { 'github/copilot.vim' }
 
+  -- Spotify
+  use {
+    'KadoBOT/nvim-spotify',
+    requires = 'nvim-telescope/telescope.nvim',
+    run = 'make'
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
