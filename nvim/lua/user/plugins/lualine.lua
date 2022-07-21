@@ -53,8 +53,11 @@ end
 local spaces = function()
   return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
+
 local status = require 'nvim-spotify'.status
+
 status:start()
+
 lualine.setup({
   options = {
     icons_enabled = true,
@@ -68,7 +71,7 @@ lualine.setup({
     lualine_c = { "b:coc_symbol_line" },
     lualine_x = { 'g:coc_status', spaces, "encoding", filetype },
     lualine_y = { location },
-    lualine_z = { progress, status.listen },
+    lualine_z = { progress },
   },
   inactive_sections = {
     lualine_a = {},

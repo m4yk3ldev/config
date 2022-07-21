@@ -105,7 +105,27 @@
   "coc.source.buffer.priority": 50,
   "coc.preferences.formatOnType": true,
   "snippets.ultisnips.enable": false,
-  "cSpell.userWords": [
-    "webp"
-  ]
+  "cSpell.userWords": ["webp"],
+  "dialog.floatBorderHighlight": "FloatBorder",
+  "suggest.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "hover.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "signature.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "diagnostic.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "esbonio.enableFixDirectiveCompletion": false
 }
