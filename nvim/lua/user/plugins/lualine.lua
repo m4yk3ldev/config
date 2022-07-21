@@ -54,10 +54,6 @@ local spaces = function()
   return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-local status = require 'nvim-spotify'.status
-
-status:start()
-
 lualine.setup({
   options = {
     icons_enabled = true,
