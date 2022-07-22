@@ -44,7 +44,8 @@
   "javascript.autoClosingTags": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
-    "svelte": "html"
+    "svelte": "html",
+    "typescript": "typescriptreact"
   },
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
@@ -126,6 +127,5 @@
     "border": true,
     "winblend": 15,
     "borderhighlight": "FloatBorder"
-  },
-  "esbonio.enableFixDirectiveCompletion": false
+  }
 }
