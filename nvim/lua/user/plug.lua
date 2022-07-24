@@ -125,24 +125,6 @@ return packer.startup(function(use)
   -- Install copilot plugin
   use { 'github/copilot.vim' }
 
-  -- -- Spotify
-  -- -- use { "stsewd/spotify.nvim", run = ":UpdateRemotePlugins" }
-  -- use {
-  --   'KadoBOT/nvim-spotify',
-  --   requires = 'nvim-telescope/telescope.nvim',
-  --   config = function()
-  --     local spotify = require 'nvim-spotify'
-  --
-  --     spotify.setup {
-  --       -- default opts
-  --       status = {
-  --         update_interval = 10000, -- the interval (ms) to check for what's currently playing
-  --         format = '%t' -- spotify-tui --format argument
-  --       }
-  --     }
-  --   end,
-  --   run = 'make'
-  -- }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

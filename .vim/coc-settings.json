@@ -17,7 +17,8 @@
     "volumeicon",
     "wezterm",
     "autopep8",
-    "autopep"
+    "autopep",
+    "winblend",
+    "borderhighlight"
   ]
 }
-

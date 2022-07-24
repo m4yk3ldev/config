@@ -31,7 +31,14 @@ vim.g.coc_global_extensions = {
   "coc-gitmoji",
   "coc-yaml",
   "coc-gitignore",
+  "coc-diagnostic",
 }
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
 vim.cmd('let g:javascript_plugin_flow = 1')
 vim.cmd("autocmd CursorHold * silent call CocActionAsync('highlight')")
+vim.cmd("autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')")
+vim.cmd([[
+  augroup JsonToJsonc
+    autocmd! FileType json set filetype=jsonc
+augroup END
+]])
