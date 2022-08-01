@@ -105,6 +105,7 @@ return packer.startup(function(use)
   use("neoclide/vim-jsx-improve")
   use("pangloss/vim-javascript")
   use("yuezk/vim-js")
+  use('jxnblk/vim-mdx-js')
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")

@@ -64,7 +64,7 @@ lualine.setup({
   sections = {
     lualine_a = { "mode" },
     lualine_b = { branch, diagnostics, diff },
-    lualine_c = { "b:coc_symbol_line" },
+    lualine_c = {  },
     lualine_x = { 'g:coc_status', spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { progress },
