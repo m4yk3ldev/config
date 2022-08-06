@@ -107,7 +107,10 @@
   "coc.source.buffer.priority": 50,
   "coc.preferences.formatOnType": true,
   "snippets.ultisnips.enable": false,
-  "cSpell.userWords": ["webp"],
+  "cSpell.userWords": [
+    "Whatapp",
+    "webp"
+  ],
   "dialog.floatBorderHighlight": "FloatBorder",
   "suggest.floatConfig": {
     "border": true,
