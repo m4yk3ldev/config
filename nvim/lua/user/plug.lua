@@ -120,7 +120,7 @@ return packer.startup(function(use)
   use("nicwest/vim-http")
 
   -- COC
-  use { 'neoclide/coc.nvim', branch = 'release' }
+  use { 'neoclide/coc.nvim', branch = 'release', tag = "*" }
   -- Install copilot plugin
   use { 'github/copilot.vim' }
 
