@@ -1,6 +1,7 @@
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
+local coc_opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -92,7 +93,7 @@ keymap("n", "<leader>h", "<cmd>Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>e", "<cmd>Telescope symbols<cr>"
   , opts)
 
--- Para sellecionar todo
+-- Para selecionar todo
 keymap("n", "<C-a>", "ggVG", opts)
 
 -- COC
@@ -105,6 +106,9 @@ keymap("n", "gi", "<Plug>(coc-implementation)", opts)
 keymap("n", "K", ":call CocActionAsync('doHover')<CR>", opts)
 keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
 keymap("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
+keymap("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], coc_opts)
+keymap("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', coc_opts)
+keymap("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], coc_opts)
 keymap('n', '<F3>', ':call CocAction("format")<CR>', opts)
 keymap("n", "gc", "<Plug>(coc-git-commit)", opts)
 -- navigate conflicts of current buffer
