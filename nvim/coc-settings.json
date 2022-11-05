@@ -17,6 +17,7 @@
   "sumneko-lua.enableNvimLuaDev": true,
   "cSpellExt.enableDictionaries": ["portuguese-brazilian", "spanish"],
   "cSpell.language": "en,pt,pt_BR,es",
+  "cSpell.enabled": true,
   "diagnostic.infoSign": " ",
   "diagnostic.warningSign": " ",
   "diagnostic.errorSign": " ",
@@ -87,7 +88,6 @@
   "coc.source.buffer.priority": 50,
   "coc.preferences.formatOnType": true,
   "snippets.ultisnips.enable": false,
-  "cSpell.userWords": ["Whatapp", "webp"],
   "dialog.floatBorderHighlight": "FloatBorder",
   "suggest.floatConfig": {
     "border": true,
