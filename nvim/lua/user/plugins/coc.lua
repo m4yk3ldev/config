@@ -18,7 +18,6 @@ vim.g.coc_global_extensions = {
   'coc-xml',
   'coc-styled-components',
   'coc-html-css-support',
-  'coc-import-cost',
   'coc-vimlsp',
   'coc-sumneko-lua',
   'coc-yank',
