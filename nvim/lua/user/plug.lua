@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use("folke/trouble.nvim")
   use("folke/tokyonight.nvim")
   use("sainnhe/sonokai")
+  use { "ellisonleao/gruvbox.nvim" }
 
   -- snippets
   use({ "L3MON4D3/LuaSnip" }) --snippet engine
