@@ -122,8 +122,6 @@ return packer.startup(function(use)
 
   -- COC
   use { 'neoclide/coc.nvim', branch = 'release', tag = "*" }
-  -- Install copilot plugin
-  use { 'github/copilot.vim' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
