@@ -1,18 +1,29 @@
 #!/bin/bash
 
-echo "Installing all depeneded packages"
+echo "Instalando los componentes  visuales de GNU"
 
-sudo pacman -S i3 zsh git kitty i3-status-rust rofi volumeicon wezterm
+echo "Instalando dependencias de YAY"
+sudo pacman -S --needed git base-devel
+cd $HOME
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd $HOME 
+rm -rfv yay
+
+yay -S i3 zsh kitty i3status-rust rofi volumeicon wezterm wget network-manager-applet pulseaudio nerd-fonts-complete
 
 echo "Agregando configuraciones de i3"
 mkdir -p $HOME/.i3
 ln -sfv $PWD/.i3/config $HOME/.i3/config
 
 echo "Agregando configuraciones al zsh"
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sfv $PWD/.zshrc  $HOME/.zshrc
 
 
 echo "Agregando configuraciones al zsh"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/themes/powerlevel10k
 ln -sfv $PWD/.p10k.zsh  $HOME/.p10k.zsh
 
 echo "Agregando configuraciones de Kitty"
