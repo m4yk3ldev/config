@@ -17,6 +17,16 @@
   "sumneko-lua.enableNvimLuaDev": true,
   "cSpellExt.enableDictionaries": ["portuguese-brazilian", "spanish"],
   "cSpell.language": "en,pt,pt_BR,es",
+  "cSpell.ignorePaths": [
+    "node_modules",
+    "**/node_modules",
+    "**/node_modules/**",
+    "node_modules/**",
+    "vscode-extension",
+    ".git",
+    "*.dll",
+    "**/*.dll"
+  ],
   "cSpell.enabled": true,
   "diagnostic.infoSign": " ",
   "diagnostic.warningSign": " ",
@@ -26,11 +36,6 @@
   "tabnine.priority": 1,
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "svelte": "html",
-    "typescript": "typescriptreact"
-  },
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.typeCheckingMode": "basic",
   "python.formatting.provider": "autopep8",
@@ -75,7 +80,6 @@
   "suggest.triggerCompletionWait": 30,
   "suggest.autoTrigger": "always",
   "suggest.localityBonus": true,
-  "suggest.fixInsertedWord": true,
   "suggest.enablePreselect": true,
   "suggest.removeDuplicateItems": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
