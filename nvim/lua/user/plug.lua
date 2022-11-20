@@ -63,6 +63,8 @@ return packer.startup(function(use)
   use("norcalli/nvim-colorizer.lua")
   use({ "akinsho/toggleterm.nvim", branch = "main" })
   use("folke/trouble.nvim")
+
+  -- Theme
   use("folke/tokyonight.nvim")
   use("sainnhe/sonokai")
   use { "ellisonleao/gruvbox.nvim" }
@@ -72,7 +74,6 @@ return packer.startup(function(use)
   use({ "L3MON4D3/LuaSnip" }) --snippet engine
   use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
   use({ "stevearc/vim-vscode-snippets" }) -- Usar los snippets del Vscode
-
   use { "Djancyp/cheat-sheet" } -- Cargar documentacion de cada lenguaje
 
   -- Treesitter
@@ -122,6 +123,19 @@ return packer.startup(function(use)
   use("nicwest/vim-http")
 
   -- LSP
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'neovim/nvim-lspconfig' -- LSP
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
+
+  -- Completion
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'hrsh7th/cmp-cmdline' -- Comando cmdline
+  use 'hrsh7th/cmp-path' -- Path
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

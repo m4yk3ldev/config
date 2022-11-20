@@ -12,3 +12,5 @@ require("user.plugins.project") -- Cargando Project
 require("user.plugins.refactoring") -- Cargando refactoring
 --[[ require("user.plugins.coc") -- Cargando COC config ]]
 require("user.plugins.wichkey") -- Cargando Wich Key config
+require("user.plugins.lsp") -- Cargando LSP
+require("user.plugins.cmp") -- Cargando CMP
