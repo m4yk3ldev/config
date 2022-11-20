@@ -1,24 +1,12 @@
 #!/bin/bash
-
-echo "Instalando los componentes  visuales de GNU"
-
 echo "Instalando dependencias de YAY"
-sudo pacman -S --needed git base-devel
-cd $HOME
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd $HOME 
-rm -rfv yay
-
-yay -S i3 zsh kitty i3status-rust rofi volumeicon wezterm wget network-manager-applet pulseaudio nerd-fonts-complete
+yay -S zsh kitty i3status-rust rofi wezterm wget nerd-fonts-complete
 
 echo "Agregando configuraciones de i3"
 mkdir -p $HOME/.i3
 ln -sfv $PWD/.i3/config $HOME/.i3/config
 
 echo "Agregando configuraciones al zsh"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sfv $PWD/.zshrc  $HOME/.zshrc
 
 
