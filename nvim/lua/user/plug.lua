@@ -121,8 +121,7 @@ return packer.startup(function(use)
   -- Para syntax files HTTP files
   use("nicwest/vim-http")
 
-  -- COC
-  use { 'neoclide/coc.nvim', branch = 'release', tag = "*" }
+  -- LSP
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
