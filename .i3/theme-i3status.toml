@@ -2,22 +2,6 @@ theme = "nord-dark"
 icons = "awesome5"
 
 [[block]]
-block = "disk_space"
-path = "/"
-alias = "/"
-info_type = "available"
-unit = "MB"
-interval = 20
-warning = 20.0
-alert = 10.0
-
-[[block]]
-block = "temperature"
-collapsed = true
-interval = 10
-format = "{average}"
-
-[[block]]
 block = "memory"
 display_type = "memory"
 format_mem = "{mem_used_percents}"
