@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Instalando dependencias de YAY"
-yay -S zsh kitty i3status-rust rofi wezterm wget nerd-fonts-complete
+yay -S rofi wezterm wget nerd-fonts-complete
 
 echo "Agregando configuraciones de i3"
 mkdir -p $HOME/.i3
@@ -11,7 +11,7 @@ ln -sfv $PWD/.zshrc  $HOME/.zshrc
 
 
 echo "Agregando configuraciones al zsh"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/themes/powerlevel10k
+#git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/themes/powerlevel10k
 ln -sfv $PWD/.p10k.zsh  $HOME/.p10k.zsh
 
 echo "Agregando configuraciones de Kitty"

@@ -41,4 +41,3 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 # Bun
 export BUN_INSTALL="/home/maykel/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-source /usr/share/nvm/init-nvm.sh
