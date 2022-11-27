@@ -65,8 +65,6 @@ return packer.startup(function(use)
   use("folke/trouble.nvim")
 
   -- Theme
-  use("folke/tokyonight.nvim")
-  use("sainnhe/sonokai")
   use { "ellisonleao/gruvbox.nvim" }
   use { "folke/which-key.nvim" }
 

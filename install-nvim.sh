@@ -2,7 +2,8 @@
 # Copiar los archivos en el $HOME
 set -ex
 
-sudo pacman -S --needed neovim python-neovim fzf 
+echo "Instalando NVIM"
+sudo pacman -S --needed neovim python-neovim fzf xclip ripgrep fd luarocks
 
 echo "Enviando enlace  a .nvim"
 ln -sfv $PWD/nvim $HOME/.config/nvim

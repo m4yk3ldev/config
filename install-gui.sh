@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Instalando dependencias de Trizen"
-trizen -S rofi wezterm wget nerd-fonts-complete arandr i3status-rust
+trizen -S rofi wezterm wget nerd-fonts-complete arandr i3status-rust 
 
 echo "Agregando configuraciones de i3"
 mkdir -p $HOME/.i3
