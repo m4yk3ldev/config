@@ -59,6 +59,7 @@ return packer.startup(function(use)
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   })
+  use 'arkav/lualine-lsp-progress'
   use("kyazdani42/nvim-tree.lua")
   use("norcalli/nvim-colorizer.lua")
   use({ "akinsho/toggleterm.nvim", branch = "main" })
@@ -134,14 +135,11 @@ return packer.startup(function(use)
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'hrsh7th/cmp-cmdline' -- Comando cmdline
   use 'hrsh7th/cmp-path' -- Path
+  use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' } -- Habilitar el Tabnine
 
   -- GIT
-  use {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
+  use 'lewis6991/gitsigns.nvim'
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
