@@ -129,7 +129,7 @@ return packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'glepnir/lspsaga.nvim' -- LSP UIs
 
-  -- Completion
+  -- Completion (CMP)
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
@@ -139,6 +139,7 @@ return packer.startup(function(use)
 
   -- GIT
   use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim' -- For git blame & browse
 
 
   -- Automatically set up your configuration after cloning packer.nvim
