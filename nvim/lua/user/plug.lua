@@ -59,7 +59,6 @@ return packer.startup(function(use)
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   })
-  use 'arkav/lualine-lsp-progress'
   use("kyazdani42/nvim-tree.lua")
   use("norcalli/nvim-colorizer.lua")
   use({ "akinsho/toggleterm.nvim", branch = "main" })
@@ -140,6 +139,25 @@ return packer.startup(function(use)
   -- GIT
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+  -- Spotify
+  -- Lua
+  use {
+    'KadoBOT/nvim-spotify',
+    requires = 'nvim-telescope/telescope.nvim',
+    config = function()
+      local spotify = require 'nvim-spotify'
+
+      spotify.setup {
+        -- default opts
+        status = {
+          update_interval = 10000, -- the interval (ms) to check for what's currently playing
+          format = '%s %t by %a' -- spotify-tui --format argument
+        }
+      }
+    end,
+    run = 'make'
+  }
 
 
   -- Automatically set up your configuration after cloning packer.nvim

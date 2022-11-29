@@ -23,6 +23,7 @@ null_ls.setup {
     null_ls.builtins.diagnostics.fish,
     null_ls.builtins.diagnostics.djlint,
     null_ls.builtins.code_actions.eslint_d,
+    null_ls.builtins.code_actions.gitsigns,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
