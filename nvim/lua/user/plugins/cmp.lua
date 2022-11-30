@@ -3,8 +3,8 @@ if (not status) then return end
 local lspkind = require 'lspkind'
 
 local source_mapping = {
-  buffer = "[Buffer]",
   nvim_lsp = "[LSP]",
+  buffer = "[Buffer]",
   nvim_lua = "[Lua]",
   cmp_tabnine = "[TN]",
   path = "[Path]",
