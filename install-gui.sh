@@ -28,3 +28,7 @@ ln -sfv $PWD/volumeicon/volumeicon $HOME/.config/volumeicon/volumeicon
 echo "Agregando configuraciones de WezTerm"
 mkdir -p $HOME/.config/wezterm/
 ln -sfv $PWD/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
+
+echo "Agregando configuraciones de Kitty"
+mkdir -p $HOME/.config/kitty/
+ln -sfv $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
