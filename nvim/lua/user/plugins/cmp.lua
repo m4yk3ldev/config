@@ -31,9 +31,6 @@ cmp.setup({
     { name = 'cmp_tabnine' },
     { name = 'buffer' },
   }),
-  --[[ formatting = { ]]
-  --[[   format = lspkind.cmp_format({ with_text = false, maxwidth = 50 }) ]]
-  --[[ } ]]
   formatting = {
     format = function(entry, vim_item)
       -- if you have lspkind installed, you can use it like
@@ -60,8 +57,8 @@ cmp.setup({
     priority_weight = 2,
     comparators = {
       require('cmp_tabnine.compare'),
-      compare.offset,
       compare.exact,
+      compare.offset,
       compare.score,
       compare.recently_used,
       compare.kind,
