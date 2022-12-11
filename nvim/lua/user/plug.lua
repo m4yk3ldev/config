@@ -122,10 +122,8 @@ return packer.startup(function(use)
 
   -- LSP
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'neovim/nvim-lspconfig' -- LSP
-  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  --[[ use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua ]]
+  use { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig' } -- LSP
   use 'glepnir/lspsaga.nvim' -- LSP UIs
 
   -- Completion (CMP)
