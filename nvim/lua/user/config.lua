@@ -1,3 +1,4 @@
+---@diagnostic disable: duplicate-set-field
 -- :help options
 vim.cmd('autocmd!')
 
