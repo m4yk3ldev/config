@@ -3,28 +3,6 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
-local statusMason, mason = pcall(require, "mason")
-if (not statusMason) then return end
-
-local status2, lspconfigMason = pcall(require, "mason-lspconfig")
-if (not status2) then return end
-
-mason.setup()
-lspconfigMason.setup {
-  automatic_installation = true,
-  ensure_installed = {
-    "sumneko_lua",
-    "tsserver",
-    "pyright",
-    "bashls",
-    "cssls",
-    "dockerls",
-    "cssmodules_ls",
-    "eslint",
-    "emmet_ls"
-  }
-}
-
 local protocol = require('vim.lsp.protocol')
 
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
@@ -42,7 +20,7 @@ end
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  enable_format_on_save(client, bufnr)
 end
 
 protocol.CompletionItemKind = {
@@ -96,10 +74,7 @@ nvim_lsp.sourcekit.setup {
 
 nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
-  end,
+  on_attach = on_attach,
   settings = {
     Lua = {
       diagnostics = {
@@ -135,13 +110,10 @@ nvim_lsp.pyright.setup {
 }
 nvim_lsp.bashls.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
 }
 
-nvim_lsp.eslint.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
+
 nvim_lsp.emmet_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
