@@ -105,6 +105,7 @@ return packer.startup(function(use)
   use("pangloss/vim-javascript")
   use("yuezk/vim-js")
   use('jxnblk/vim-mdx-js')
+  use { "evanleck/vim-svelte", branch = "main" }
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
