@@ -41,3 +41,4 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 # Bun
 export BUN_INSTALL="/home/maykel/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export OPENAI_API_KEY="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"
