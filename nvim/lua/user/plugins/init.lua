@@ -15,3 +15,4 @@ require("user.plugins.lsp") -- Cargando LSP
 require("user.plugins.cmp") -- Cargando CMP
 require("user.plugins.gitsigns") -- Cargando gitsigns
 require("user.plugins.git") -- Cargando git
+require("user.plugins.neural") -- Cargando Neural

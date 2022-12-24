@@ -158,6 +158,16 @@ return packer.startup(function(use)
     run = 'make'
   }
 
+  use({
+    'dense-analysis/neural',
+    'MunifTanjim/nui.nvim',
+    'ElPiloto/significant.nvim',
+    requires = {
+      'MunifTanjim/nui.nvim',
+      'ElPiloto/significant.nvim'
+    }
+  })
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
