@@ -17,7 +17,7 @@ neural.setup({
     frequency_penalty = 0.5,
     max_tokens = 2048,
     context_lines = 16, -- Surrounding lines for swift completion
-    api_key = OPEN_API_KEY, -- (DO NOT COMMIT)
+    api_key = OPEN_API_KEY,
   },
   -- Visual settings
   ui = {
