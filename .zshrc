@@ -36,10 +36,10 @@ export BROWSER="google-chrome-stable"
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 # bun completions
-[ -s "/home/maykel/.bun/_bun" ] && source "/home/maykel/.bun/_bun"
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
 # Bun
-export BUN_INSTALL="/home/maykel/.bun"
+export BUN_INSTALL="${HOME}/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export PATH="$PATH:/home/maykel/.bin"
+export PATH="$PATH:${HOME}/.bin"

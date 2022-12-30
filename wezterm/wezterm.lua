@@ -13,7 +13,7 @@ return {
     hue = 1.0,
     saturation = 1.0,
   },
-  window_background_image = "/home/maykel/config/wezterm/wall.jpg",
+  window_background_image = os.getenv("HOME") + "/config/wezterm/wall.jpg",
   font = font_with_fallback(font_name),
   font_rules = {
     {
