@@ -28,7 +28,7 @@ font xft:Hack Nerd Font Mono:size=12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -65,7 +65,6 @@ bindsym Print exec --no-startup-id xfce4-screenshooter
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+Shift+F9 exec "$HOME/Hubstaff/HubstaffClient.bin.x86_64"
 
 # focus_follows_mouse no
 
@@ -146,6 +145,7 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+set $web 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -181,11 +181,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
+assign [class="chrome"] $web
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="*code*"] floating enable
+for_window [class="*chrome*"] floating enable
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="fpakman"] floating enable
@@ -210,6 +211,9 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+
+# Assing windows custom by app
+for_window [class="chrome"] move to workspace $web
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
