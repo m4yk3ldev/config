@@ -14,8 +14,8 @@ format = "{barchart} {utilization}"
 
 [[block]]
 block = "net"
-device = "wlp1s0"
-format = " {ssid} {ip}"
+device = "enp2s0"
+format = "{speed_down}/{speed_up}"
 interval = 5
 
 [[block]]
