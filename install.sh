@@ -24,5 +24,3 @@ ln -sfv "$PWD/rofi/config.rasi" "$HOME/.config/rofi/config.rasi"
 echo "Agregando configuraciones de Kitty"
 mkdir -p "$HOME/.config/kitty/"
 ln -sfv "$PWD/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
-
-

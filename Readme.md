@@ -5,7 +5,6 @@
 - git
 - ccat
 - kitty
-- i3status-rust
 - python-neovim
 - nvm
 - neovim
@@ -18,5 +17,3 @@
 
 - volumeicon
 - nm-applet
-
-
