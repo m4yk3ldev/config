@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Instalando dependencias de Yay"
+echo "Instalando dependencias de Yay 😀"
 sudo pacman -S rofi wget kitty exa
 
 echo "Install fonts "

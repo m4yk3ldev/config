@@ -13,7 +13,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git fzf docker command-not-found rsync nvm emoji emoji-clock yarn npm archlinux adb battery colored-man-pages ubuntu ng)
+plugins=(git fzf docker command-not-found rsync emoji emoji-clock yarn npm archlinux adb battery colored-man-pages ubuntu ng)
 
 [[ ! -f $ZSH/oh-my-zsh.sh  ]] || source $ZSH/oh-my-zsh.sh
 
