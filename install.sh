@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Instalando dependencias de Yay 😀"
-sudo pacman -S rofi wget kitty exa
+#sudo pacman -S rofi wget kitty exa
 
 echo "Install fonts "
 wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
