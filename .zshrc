@@ -29,6 +29,7 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+alias docker-remove="docker compose down && docker volume prune --all --force && docker  image prune --all --force"
 export BROWSER="google-chrome-stable"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
