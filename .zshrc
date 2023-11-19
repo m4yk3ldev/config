@@ -52,7 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 #eval $(ssh-agent -s)
-
-#ssh-add ~/.ssh/id_rsa
+#ssh-add ~/.ssh/id_ed25519
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
