@@ -13,7 +13,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git fzf docker command-not-found rsync emoji emoji-clock yarn npm archlinux adb battery colored-man-pages ubuntu ng)
+plugins=(git fzf docker command-not-found rsync yarn npm archlinux adb battery colored-man-pages ubuntu ng)
 
 [[ ! -f $ZSH/oh-my-zsh.sh  ]] || source $ZSH/oh-my-zsh.sh
 
@@ -30,6 +30,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias docker-remove="docker compose down && docker volume prune --all --force && docker  image prune --all --force"
+alias miner_etc="miner --algo etchash --server etc.poolbinance.com:1800 --user hanibal920915Etc.001"
 export BROWSER="google-chrome-stable"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -51,7 +52,9 @@ export NVM_DIR="$HOME/.nvm"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-#eval $(ssh-agent -s)
-#ssh-add ~/.ssh/id_ed25519
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_ed25519
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+
+PATH=~/.console-ninja/.bin:$PATH
