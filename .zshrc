@@ -12,6 +12,7 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.bun/bin:$PATH
 export ZSH="${HOME}/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+export COREPACK_ENABLE_STRICT="0"
 
 plugins=(git fzf docker command-not-found rsync yarn npm archlinux adb battery colored-man-pages ubuntu ng)
 
@@ -53,7 +54,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_rsa
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
