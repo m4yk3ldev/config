@@ -30,7 +30,7 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias docker-remove="docker compose down && docker volume prune --all --force && docker  image prune --all --force"
+alias docker-remove="docker compose down && docker volume prune --all --force && docker image prune --all --force"
 alias miner_etc="miner --algo etchash --server etc.poolbinance.com:1800 --user hanibal920915Etc.001"
 export BROWSER="google-chrome-stable"
 
